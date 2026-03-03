@@ -2,19 +2,23 @@
 
 @import url('./styles/global/themes.css');
 @import url('./styles/global/text.css');
+@import url('./styles/global/motion.css');
 
 @import url('./styles/layouts/mobile.css');
 @import url('./styles/layouts/nav.css');
 @import url('./styles/layouts/footer.css');
 
-@import url('./styles/sections/presentation.css');
+@import url('./styles/sections/hero.css');
+@import url('./styles/sections/experience.css');
 @import url('./styles/sections/projects.css');
 @import url('./styles/sections/techs.css');
 @import url('./styles/sections/about.css');
 
 @import url('./styles/components/home.css');
+@import url('./styles/components/Carrousel.css');
 @import url('./styles/components/ThemeSwitch.css');
 
+@import url('./styles/components/projects/ProjectLayouts.css');
 @import url('./styles/components/projects/ImageCarousel.css');
 @import url('./styles/components/projects/ProjectDetails.css');
 @import url('./styles/components/projects/ProjectNav.css');
@@ -123,30 +127,54 @@ a:hover {
   filter: brightness(100%);   /* oscurecido */
 }
 
-button{
+button,
+a {
     position: relative;
     overflow: hidden;        
     z-index: 0;     
     display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
+    /* font-size: 14px; */
+    /* font-weight: 700; */
+
+    transition: transform 0.05s cubic-bezier(.34,1.56,.64,1);
+    will-change: transform;
 }
 
-a::before, button::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background-color 0.1s ease;
-  pointer-events: none;
-  z-index: 1;
-  border-radius: 10px;
+/* Overlay */
+a::before,
+button::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    z-index: 1;
+    /* border-radius: 10px; */
+    transition: background 0.05s ease;
+}
+
+/* ✨ Hover → crece ligeramente */
+a:hover,
+button:hover{
+    transform: scale(1.03);
 }
 
 a:hover::before,
 button:hover::before{
-  background: rgba(173, 188, 255, 0.377);
-  transition: background-color 0.1s ease;
+    background: rgba(173, 188, 255, 0.163);
+}
+
+
+@keyframes bounceGrow {
+    0%   { transform: scale(1.06); }
+    40%  { transform: scale(1.18); }  /* overshoot */
+    70%  { transform: scale(1.02); }  /* rebote */
+    100% { transform: scale(1.06); }
+}
+
+button:active,
+a:active {
+    animation: bounceGrow 0.35s cubic-bezier(.34,1.56,.64,1);
 }
 
 
@@ -170,7 +198,7 @@ textarea {
 
 /* Text */
 label, p {
-    text-align: justify;
+    text-align: start;
 }
 
 ul, ol {
@@ -202,22 +230,171 @@ video {
     height: 34px;
     display: flex;
     flex:1;
-    gap: 10px;
     align-items: center;
-    padding: 5px 10px;
+    justify-content: center;
     background-color: var(--highlight2);
+    border-radius: 40px;
+}
+
+.download-cv::before {
+  border-radius: 20px;
+  background-color: #0000;
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+  pointer-events: none;
+  z-index: 1000;
+  border-radius: 40px;
+
+}
+.download-cv:hover::before {
+  background-color: #9a9cc329;
+}
+
+.download-cv > a {
+    height: 34px;
+    display: flex;
+    flex:1;
+    gap: 10px;
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--highlight2); */
     border-radius: 40px;
     font-weight: 600;
     color: var(--text-highlight);
+    padding: 0 15px;
 }
 .download-cv img {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
-.download-cv::before {
+.download-cv a::before {
   border-radius: 20px;
+  background-color: #0000;
 }
+.download-cv .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000;
+    height: 100%;
+    width: 35px;
+    border-radius: 0px;
+    padding-right: 5px;
+    padding-top: 3px;
+    border: none;
+    border-left: 1px solid #e8e4f158;
+    
+}
+.download-cv .arrow img{
+    width: 12px;
+    height: auto;
+}
+.download-cv .arrow::before {
+  border-radius: 0 20px 20px 0;
+}
+.download-cv {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.floating-menu {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  z-index: 10;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sec);
+  background-color: var(--bg);
+  padding: 10px 0;
+  border-radius: 10px;
+  width: 175px;
+
+  /* estado cerrado */
+  opacity: 0;
+  transform: translate(50%);
+  pointer-events: none;
+
+  transform-origin: top right;
+
+  transition:
+    opacity 0.1s ease,
+    transform 0.3s cubic-bezier(.34,1.56,.64,1);
+
+  transition-delay: 0.05s;
+}
+
+.floating-menu.open {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.floating-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+border-radius: 0;
+}
+
+.floating-menu ul li a {
+  background-color: #0000;
+    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 0px;
+  padding: 8px 20px;
+}
+
+.floating-menu ul li a:hover {
+  background-color: #0000;
+    border-radius: 0px;
+}
+.floating-menu ul li a:hover::before {
+    border-radius: 0px;
+    background-color: #9897a028;
+    /* background-color: #979ce12b; */
+}
+
+/* Mostrar el menú cuando está visible */
+.floating-menu {
+  display: block;
+}
+
+.floating-menu a {
+  padding: 5px;
+  text-align: center;
+  border-radius: 0;
+}
+.floating-menu a img{
+    position: absolute;
+    right: 20px;
+    filter: invert(0.7);
+    width: 16px;
+    height: auto;
+}
+.floating-menu a .download{
+    width: 18px;
+}
+
+
+.floating-menu a, .floating-menu a::before, .floating-menu a:hover, .floating-menu a:hover::before, .floating-menu a:active, .floating-menu a:active::before {
+    border-radius: 0;
+    transform: none;
+    animation: none;
+}
+
 
 /* ScrollBar */
 ::-webkit-scrollbar {
@@ -248,6 +425,14 @@ button, a, input, textarea {
     -webkit-tap-highlight-color: transparent;
 }
 
+header .theme-switch {
+    display: none;
+}
+
+html {
+  /* scroll-behavior: smooth; */
+}
+
 
 /* Vertical */
 @media (max-width: 768px) {
@@ -258,7 +443,8 @@ button, a, input, textarea {
     header {
         padding: 7px 5px;
     }
-    header .theme-switch {
+
+    .floating-menu {
         display: none;
     }
 }

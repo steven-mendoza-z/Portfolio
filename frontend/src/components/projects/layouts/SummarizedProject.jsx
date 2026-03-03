@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarousel from "../components/AutoplayImageCarousel";
+import ProjectLinks from "../components/ProjectLinks";
 
-export function ProjectBrief({
+export function SummarizedProject ({
   mainImg,
   name,
   description,
@@ -46,17 +47,7 @@ export function ProjectBrief({
 
                 {/* Links */}
                 <div className="flex gap10">
-                {Object.entries(links).map(([type, url]) => (
-                  <button
-                    key={type}
-                    type="button"
-                    className="project-link"
-                    onClick={() => openLink(url)}
-                    title={url}
-                  >
-                    {type}
-                  </button>
-                ))}
+                <ProjectLinks links={links}/>
 
                 </div>
             </div>
@@ -64,4 +55,4 @@ export function ProjectBrief({
       </div>
       )}
 
-export default ProjectBrief;
+export default SummarizedProject ;

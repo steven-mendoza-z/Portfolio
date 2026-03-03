@@ -1,12 +1,55 @@
 footer {
     padding: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-top: 80px;
+    overflow: visible;
 }
    
+footer .email {
+    padding: 0;
+    border-radius: 50px;
+    gap: 15px;
+    padding: 0 10px;
+    border: none;
+    background-color: #0000;
+    position: relative;
+    overflow: visible;
+}
+footer .email:hover {
+    background-color: #0000;
+    color: var(--text-main);
+}
+footer .email:hover::before {
+    background-color: #0000;
+}
 
-/* footer .icon-inverter {
-    width: 35px;
-    height: 35px;
-} */
+
+/* Tooltip global */
+.desktop .email.tooltip::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(50%);
+  left: calc(100% - 5px);
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+
+  display: inline-block;
+  white-space: nowrap;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sec);
+  background-color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  z-index: 9999;
+}
+.desktop .email.tooltip:hover::after {
+  opacity: 1;
+}
+.desktop .email.tooltip.tooltip-open::after {
+  opacity: 1;
+}
 

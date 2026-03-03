@@ -1,3 +1,4 @@
+// Portfolio socials data
 export const socials = [
   {
     name: "LinkedIn",

@@ -2,11 +2,11 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 import ProjectLinks from "../components/ProjectLinks";
 
-function ProjectPreview({ mainImage, title, subtitle, description, links, priority = false }) {
+function DetailedProjectMobile({ mainImage, title, subtitle, description, links, priority = false }) {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}>
-      <div className="card preview mobile">
+      <div className="card detailed-project mobile">
         <img
           className="card-img"
           src={`projects/${mainImage}`}
@@ -33,4 +33,4 @@ function ProjectPreview({ mainImage, title, subtitle, description, links, priori
   );
 }
 
-export default memo(ProjectPreview);
+export default memo(DetailedProjectMobile);

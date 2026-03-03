@@ -1,5 +1,5 @@
-import Nav from "../layouts/nav";
-import SecundaryMenu from "./SecundaryMenu";
+import Nav from "../components/header/Nav";
+import SecundaryMenu from "../components/header/SecundaryMenu";
 
 export function Header() {    
     return (

@@ -5,7 +5,7 @@ section.about {
 section.about .description{
     display: flex;
     flex-direction: column;
-    width: clamp(300px,60vw,1000px);
+    width: clamp(300px,85vw, 800px);
     gap: 30px;
 }
 

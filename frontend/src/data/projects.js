@@ -1,149 +1,111 @@
-// import * as techs from "../data/techs";
-
-// export const projects = [
-//   {
-//     type: "full",
-//     name: ["Hermes Services &", "hermes-deployer framework"],
-//     description:
-//       "A DevOps-as-Code solution for automating multi-server deployments in App Service Environments. Simplifies environment management, infrastructure setup, and CI/CD.",
-    
-//     images: [
-//       "hermes/hermes_preview.webp",
-//       "hermes-service/hermes_servers-desk-light.webp",
-//       "hermes-service/network-diagram.webp",
-//     ],
-//     mainImage: "hermes-service/hermes_servers-desk-light.webp",
-//     stack: [techs.react, techs.django, techs.postgresql, techs.redis, techs.docker, techs.githubActions, techs.nginx, techs.gcp],
-//     links: {
-//       "View App": "https://hermes.purpleblue.site/",
-//       "Package (PyPI)": "https://pypi.org/project/hermes-deployer/",
-//       "App Repo": "https://github.com/steven-mendoza-z/hermes-deploy-service.git",
-//       "Package Repo": "https://github.com/steven-mendoza-z/DHermes.git",
-//     },
-//     tags: [
-//       "System Design", "Networking", "Devops", "Automatization"
-//     ],
-//     // problemAnalysis: {
-//     //   problem_solving: "",
-//     //   objetives: []
-//     // },
-//     // architecture: [
-//     //   {
-//     //     name: "Network Architecture Diagram",
-//     //     image: "hermes-service/network-diagram.webp",
-//     //     description:
-//     //       "Network Architecture Diagram representing the main components of the Hermes Services deployment.",
-//     //   },
-//     // ],
-//   },
-
-//   // {
-//   //   name: "hermes-deployer",
-//   //   description:
-//   //     "A DevOps-as-Code solution for automating multi-server deployments in App Service Environments. Simplifies environment management, infrastructure setup, and CI/CD.",
-//   //   images: ["hermes/hermes_preview.webp"],
-//   //   mainImage: "hermes/hermes_preview.webp",
-//   //   project_url: "https://pypi.org/project/hermes-deployer/",
-//   //   repo_url: "https://github.com/steven-mendoza-z/DHermes.git",
-//   //   stack: [],
-//   // },
-
-//   {
-//     type: "full",
-//     name: ["Quackternion"],
-//     description:
-//       "Quackternion is an interactive application for simulating objects in a 3D plane, applying spatial transformations using quaternions. It allows exporting the solution procedure in PDF or LaTeX.",
-//     images: ["quackternion/quackternion_preview.webp", "quackternion/quackternion-1.webp"],
-//     mainImage: "quackternion/quackternion_preview.webp",
-//     links: {
-//       "View App": "https://quackternion.purpleblue.site/",
-//       "Repo": "https://github.com/steven-mendoza-z/Quackternion.git",
-//     },
-//     stack: [
-//       techs.react, techs.django, techs.latex, techs.reactRouter, techs.postgresql, techs.docker, techs.nginx, techs.gcp, techs.githubActions
-//     ],
-//     tags: [
-//       "Math", "Simulation", "Educational", "Automatization"
-//     ]
-//   },
-
-//   {
-//     type: "full",
-//     name: ["Eulerian Hades"],
-//     description: "A Learning and Problem Solver Platform for engineering students",
-//     images: [
-//       "eulerian/eulerian_preview.webp",
-//       "eulerian/eulerian-1.webp",
-//       "eulerian/eulerian-2.webp",
-//       "eulerian/eulerian-0.webp",
-//     ],
-//     mainImage: "eulerian/eulerian_preview.webp",
-//     links: {
-//       "View App": "https://eulerian-hades.purpleblue.site/",
-//       "Repo": "https://github.com/steven-mendoza-z/Eulerian-hades.git",
-//     },
-//     stack: [
-//       techs.react, techs.django, techs.reactRouter, techs.postgresql, techs.redis, techs.docker, techs.nginx, techs.gcp, techs.githubActions
-//     ],
-//         tags: [
-//       "Math", "Educational"
-//     ]
-
-//   },
-// ];
-
+// Portfolio projects data
 import * as techs from "../data/techs";
 
 export const projects = [
   {
+    // Meta + Content
     type: "full",
     title: "Hermes Services",
     subtitle: "(PyPI Package Framework & Dev-Friendly Platform)",
-    description: [
-      "A DevOps-as-Code solution for automating multi-server deployments. Simplifies environment management, infrastructure setup, and CI/CD.",
-      "(PyPI Package & Dev-Friendly Platform)",
-    ],
-    images: [
-      "hermes/hermes_preview.webp",
-      "hermes-service/hermes_servers-desk-light.webp",
-      "hermes-service/network-diagram.webp",
-    ],
-    mainImage: "hermes/hermes_preview.webp",
+    mainImage: "hermes-service/hermes_mockup1.png",
 
-    // Reordenado para que no parezca “primero frontend”
+
+    // Overview Section
+    description: [
+      "A declarative DevOps framework that orchestrates multi-server deployments using YAML-defined infrastructure specifications. Includes a Python CLI (published on PyPI) and a web platform to automate provisioning, deployment execution, and CI/CD workflows."
+    ],
+    overviewImages: [
+      "hermes-service/hermes_mockup1.png",
+      "hermes-service/hermes_mockup2.png",
+    ],
     stack: [
-      techs.django,
+      {
+        img: techs.python.img,
+        name: "Python (PyPI package core)",
+      },
+      {
+        img: techs.django.img,
+        name: "Django REST Framework + Channels",
+      },
       techs.postgresql,
       techs.redis,
       techs.nginx,
-      techs.docker,
+      {
+        img: techs.docker.img,
+        name: "Docker + Docker Compose",
+      },
       techs.githubActions,
-      techs.gcp,
-      techs.react,
+      techs.gcp, 
+      {
+        img: techs.react.img,
+        name: "React (SPA)",
+      }
     ],
-
     links: {
-      "View App": "https://hermes.purpleblue.site/",
+      "View Platform": "https://hermes.purpleblue.site/",
       "Package (PyPI)": "https://pypi.org/project/hermes-deployer/",
-      "App Repo": "https://github.com/steven-mendoza-z/hermes-deploy-service.git",
+      "Platform Repo": "https://github.com/steven-mendoza-z/hermes-deploy-service.git",
       "Package Repo": "https://github.com/steven-mendoza-z/DHermes.git",
     },
+    tags: ["System Design", "DevOps", "Orchestration", "Infrastructure"],
 
-    // “Automation” y “DevOps” corregidos
-    tags: ["System Design", "Networking", "DevOps", "Automation"],
+
+    // Images Section
+    galleryImages: [
+      // "hermes-service/network-diagram.webp",
+      "hermes-service/architecture/context_diagram.png",
+      "hermes-service/architecture/containers_diagram.png",
+      "hermes-service/architecture/cicd_pipelines.png",
+      "hermes-service/hermes_view1.png",
+    ],
+
+    // context: {
+    //   name: "Hermes Services (Platform) & hermes-deployer (PyPI Framework)",      
+    //   role: "End-to-end owner: problem analysis, system architecture design (framework + platform), CLI package development, backend/frontend implementation, infrastructure setup, and CI/CD pipeline configuration.",
+    //   context: "Self-initiated DevOps-as-Code system aimed at standardizing multi-server deployments for small teams without dedicated DevOps engineers.",
+    //   problem: "Multi-environment and multi-server deployments become complex, repetitive, and error-prone for small teams. Managing dockerized services, environment configuration, and infrastructure preparation often requires advanced DevOps expertise, creating friction and operational inconsistency.",
+    //   highLevelDescription: "Hermes is a declarative DevOps framework and platform that orchestrates multi-server deployments using a YAML-based infrastructure specification. The Python CLI bootstraps servers and distributes dockerized services via SSH, while the web platform enhances usability through real-time execution visibility and workflow simplification. The package is published on PyPI and both dev and prod environments are deployed.",
+    //   coreFocus: [
+    //     "Reproducible deployments",
+    //     "Environment standardization",
+    //     "Infrastructure abstraction",
+    //     "Operational simplification"
+    //   ]
+    // },
+  
+    // architecture: [
+    //   {
+    //     title: "C4 Model Level 1:  Context diagram",
+    //     image: "projects/hermes-service/architecture/context_diagram.png"
+    //   },
+    //   {
+    //     title: "C4 Model Level 2:  Containers diagram",
+    //     image: "projects/hermes-service/architecture/containers_diagram.png"
+    //   }
+    // ],
+    // keyDecisions: [
+
+    // ],
+    // reliability: [
+
+    // ],
   },
 
   {
+    // Meta + Content
     type: "full",
     title: "Quackternion",
+    mainImage: "quackternion/quackternion_mockup1.png",
+
+
+    // Overview Section
     description: [
-      "An interactive 3D simulator that applies spatial transformations using quaternions with support for exporting the solution procedure to PDF or LaTeX.",
+      "A mathematical simulation platform that computes quaternion-based spatial transformations, persists simulation states, and generates automated PDF/LaTeX exports with step-by-step results."
     ],
-    images: [
-      "quackternion/quackternion_preview.webp",
-      "quackternion/quackternion-1.webp",
+    overviewImages: [
+      "quackternion/quackternion_mockup1.png",
+      "quackternion/quackternion_mockup2.png",
     ],
-    mainImage: "quackternion/quackternion_preview.webp",
     links: {
       "View App": "https://quackternion.purpleblue.site/",
       "Repo": "https://github.com/steven-mendoza-z/Quackternion.git",
@@ -152,29 +114,49 @@ export const projects = [
       techs.django,
       techs.postgresql,
       techs.nginx,
-      techs.docker,
+      {
+        img: techs.docker.img,
+        name: "Docker + Docker Compose",
+      },
       techs.gcp,
       techs.githubActions,
-      techs.react,
-      techs.reactRouter,
-      techs.latex,
+      {
+        img: techs.react.img,
+        name: "React (SPA)",
+      },
+      {
+        img: techs.latex.img,
+        name: "LaTeX (PDF export pipeline)",
+      }
     ],
     tags: ["Math", "Simulation", "Education", "Automation"],
+
+
+    // Images Section
+    galleryImages:[
+      "quackternion/quackternion_mockup3.png",
+      "quackternion/quackternion_mockup4.png",
+    ],
+
   },
 
   {
+    // Meta + Content
     type: "full",
     title: "Eulerian Hades",
+    mainImage: "eulerian/eulerian_mockup1.png",
+
+
+    // Overview Section
     description: [
-      "A learning and problem-solving platform for engineering students.",
+      "A modular learning platform for structured educational content and problem sets, featuring a mathematical expression engine for evaluating user inputs."    
     ],
-    images: [
-      "eulerian/eulerian_preview.webp",
-      "eulerian/eulerian-1.webp",
-      "eulerian/eulerian-2.webp",
-      "eulerian/eulerian-0.webp",
+    overviewImages: [
+      "eulerian/eulerian_mockup1.png",
+      "eulerian/eulerian_mockup2.png",
+      "eulerian/eulerian_mockup3.png",
+      "eulerian/eulerian_mockup4.png",
     ],
-    mainImage: "eulerian/eulerian_preview.webp",
     links: {
       "View App": "https://eulerian-hades.purpleblue.site/",
       "Repo": "https://github.com/steven-mendoza-z/Eulerian-hades.git",
@@ -184,12 +166,27 @@ export const projects = [
       techs.postgresql,
       techs.redis,
       techs.nginx,
-      techs.docker,
+      {
+        img: techs.docker.img,
+        name: "Docker + Docker Compose",
+      },
       techs.gcp,
       techs.githubActions,
-      techs.react,
-      techs.reactRouter,
+      {
+        img: techs.react.img,
+        name: "React (SPA)",
+      },
     ],
     tags: ["Math", "Education"],
+
+
+    // Images Section
+    galleryImages: [
+      "eulerian/eulerian_view1.png",
+      "eulerian/eulerian_view2.png",
+      "eulerian/eulerian_view3.png",
+      "eulerian/eulerian_view4.png",
+    ],
+
   },
 ];

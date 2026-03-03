@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-export function ImageCarousel({ mainImg, images }) {
+export function AutoplayImageCarousel({ mainImg, images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isManual, setIsManual] = useState(false); // controla si es manual
   const intervalRef = useRef(null);
@@ -41,14 +41,14 @@ export function ImageCarousel({ mainImg, images }) {
   return (
     <>
       {!hasCarousel ? (
-          <div className="project">
+          <div className="image-carousel">
             <img className="card-img" src={`projects/${images[0]}`} alt={name} />
           </div>
         ) : (
         <motion.div
           className="project"
-          animate={bounce ? { scale: [1, 1.02, 0.99, 1] } : {}}
-          transition={{ duration: 0.2 }}
+          animate={bounce ? { scale: [1, 1.01, 0.998, 1] } : {}}
+          transition={{ duration: 0.3 }}
         >
 
           <div className="carousel">
@@ -57,8 +57,6 @@ export function ImageCarousel({ mainImg, images }) {
             alt={`slide-${currentIndex}`}
             className="card-img"
           />
-          {/* <button className="carousel-btn left" onClick={prevImage}>◀</button> */}
-          {/* <button className="carousel-btn right" onClick={nextImage}>▶</button> */}
         </div>
         </motion.div>
 
@@ -67,4 +65,4 @@ export function ImageCarousel({ mainImg, images }) {
   );
 }
 
-export default ImageCarousel;
+export default AutoplayImageCarousel;

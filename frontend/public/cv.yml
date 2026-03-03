@@ -1,94 +1,83 @@
 cv:
-  name: Steven Mendoza
-  location: Nicaragua (Remote)
-  email: steven@steven-mendoza.com
-  phone: +505-8857-9283
-  website: https://steven-mendoza.com/
+  name: "Steven Mendoza"
+  location: "Nicaragua (Remote)"
+  email: "steven@steven-mendoza.com"
+  # phone: "+505-8857-9283"
+  website: "https://steven-mendoza.com/"
   social_networks:
-    - network: LinkedIn
-      username: steven-mendoza-z
-    - network: GitHub
-      username: steven-mendoza-z
+    - network: "LinkedIn"
+      username: "steven-mendoza-z"
+    - network: "GitHub"
+      username: "steven-mendoza-z"
 
   sections:
     summary:
-      - Backend-focused fullstack developer with a systems-first approach to backend systems and API design. I work primarily on backend APIs, authentication flows, and infrastructure-aware application design.
-
-      - Final-year Cybernetic Electronics Engineering student with a strong background in computer networks and applied mathematics, shaping how I approach system design, data flow, and architectural tradeoffs.
-
-    projects:
-      - name: '[Hermes Services](https://hermes.purpleblue.site/)'
-        start_date: 2025-01
-        end_date: present
-        summary: DevOps-as-Code platform and PyPI package for automating multi-server deployments and environment management.
-        highlights:
-          - Designed a backend-centric system for infrastructure setup, environment management, and CI/CD automation
-          - Built with Django REST, Docker, Nginx, PostgreSQL, Redis, and Google Cloud Platform
-          - Published as a reusable Python package on PyPI
-          - Emphasis on system design, automation, and reproducible deployments
-
-      - name: '[Quackternion](https://quackternion.purpleblue.site/)'
-        start_date: 2025-04
-        end_date: present
-        summary: Interactive 3D simulator applying spatial transformations using quaternions. Currently in a stable maintenance phase.
-        highlights:
-          - Implements quaternion-based transformations for 3D object simulation
-          - Automatically generates mathematical reports in PDF and LaTeX
-          - Deployed as a backend-driven fullstack application
-
-      - name: '[Eulerian Hades](https://eulerian-hades.purpleblue.site/)'
-        start_date: 2024-01
-        end_date: 2024-12
-        summary: Learning and problem-solving platform for engineering students. Initial version delivered; further development planned.
-        highlights:
-          - Backend-focused educational platform for mathematics and engineering topics
-          - Designed for modular growth and long-term maintainability
-          - Uses Django, PostgreSQL, Redis, Docker, and CI/CD workflows
+      - "Backend engineer building API-driven systems within production SaaS environments. Hands-on experience stabilizing authentication flows, implementing multi-tenant data isolation, and evolving database schemas across .NET and Python-based architectures. Final-year Cybernetic Electronics Engineering student with a systems-oriented approach to software design."
 
     experience:
-      - company: NetForemost
-        position: Fullstack Developer
-        start_date: 2025-10
-        end_date: present
-        location: Panama (Remote)
+      - company: "NetForemost"
+        position: "Software Engineer (Full-Stack)"
+        start_date: "2025-10"
+        end_date: "present"
+        location: "Panama (Remote)"
+        summary:
         highlights:
-          - Contributed to the development and maintenance of a production .NET Core API used by companies for task management, time tracking, payroll, and accountability
-          - Implemented backend endpoints focused on authentication and account lifecycle flows (login, signup, invitations, onboarding, and recovery)
-          - Worked closely with product requirements to ensure consistency between API contracts and client applications
-          - Collaborated with a distributed team following an iterative workflow, participating in estimation, planning, and scope discussions
-          - Supported client-facing development when needed to deliver complete end-to-end features
-
+          - Led stabilization and redesign of authentication and onboarding flows in a multi-tenant .NET SaaS platform affected by broken signup and invitation logic.
+          - Implemented organization-scoped signup and login workflows, including OTP-based verification, company provisioning, and token-based invitation handling.
+          - Introduced multi-tenant account state enforcement (verified account + company membership) before granting access, ensuring consistent authorization boundaries.
+          - Performed database schema evolution through entity refactoring and controlled migrations within a logically isolated multi-tenant model, enabling stable onboarding of first external client companies (early adoption stage, fewer than 10 companies)
+    
+    projects:
+      - name: "[Hermes Services](https://hermes.purpleblue.site/)"
+        start_date: "2025-01"
+        end_date: "present"
+        summary: "DevOps-as-Code platform and PyPI package for automating multi-server deployments and environment management."
+        highlights:
+          - Designed and implemented a DevOps-as-Code platform enabling automated multi-server deployments and reproducible environment provisioning
+          - Architected backend services with Django REST, Redis, and PostgreSQL to support CI/CD-driven infrastructure workflows
+          - Packaged core deployment logic as a reusable Python library published on PyPI
+      - name: "[Quackternion](https://quackternion.purpleblue.site/)"
+        start_date: "2025-04"
+        end_date: "present"
+        summary: Interactive 3D simulator applying spatial transformations using quaternions. Currently in a stable maintenance phase.
+        highlights:
+          - Designed backend services to process and persist quaternion-based spatial transformations
+          - Implemented automated PDF/LaTeX report generation pipeline from computed transformation data
+          - Built and deployed a backend-driven fullstack application with Django REST, PostgreSQL, and containerized infrastructure
+      - name: "[Eulerian Hades](https://eulerian-hades.purpleblue.site/)"
+        start_date: "2024-01"
+        end_date: "2024-12"
+        summary: Learning and problem-solving platform for engineering students. Initial version delivered; further development planned.
+        highlights:
+          - Designed a modular architecture for managing educational content, problem sets, and user progress tracking
+          - Implemented API endpoints and data models using Django REST and PostgreSQL, with Redis-based caching strategies
+         
     skills:
-      - label: Backend & Systems
-        details: Python, Django REST Framework, API design, authentication (JWT, OAuth2), system design, domain modeling
-      - label: Databases
+      - label: Backend Technologies
+        details: .NET (ASP.NET Core), Python, Django REST Framework
+      - label: API & Architecture
+        details: API design, authentication & account lifecycle modeling (JWT, OAuth2), domain modeling
+      - label: Databases & Caching
         details: PostgreSQL, Redis, MongoDB
-      - label: Backend Ecosystems (Production Experience)
-        details: .NET (API development, authentication flows)
       - label: DevOps & Infrastructure
-        details: Docker, Nginx, GitHub Actions, Google Cloud Platform (GCP), CI/CD automation
+        details: Docker, Nginx, GitHub Actions (CI/CD), Google Cloud Platform (GCP)
       - label: Frontend
-        details: HTML, CSS, JavaScript, React, React Router, Flutter
-      - label: Engineering Foundations
-        details: Computer networking, digital electronics, applied mathematics, LaTeX
+        details: React, JavaScript, Flutter
       - label: Languages
-        details: English (C1 – Professional), Spanish (Native)
+        details: English (C1 – Professional), Spanish (Native) 
 
     education:
-      - institution: Cybernetic Electronics Engineering
-        area: Cybernetic Electronics Engineering (in progress)
+      - institution: Universidad Tecnológica La Salle (ULSA)
+        area: Cybernetic Electronics Engineering
         degree: Bachelor’s Degree
         start_date: 2022-01
         end_date: 2026-12
         location: Nicaragua
         highlights:
-          - Strong foundation in systems thinking, engineering problem-solving, and applied mathematics
-          - Academic focus on software development, computer networks, digital electronics, and system modeling
+          - Strong foundation in systems thinking, applied mathematics, and structured problem-solving
+          - Academic focus on computer networks and software system modeling
 
   sort_entries: none
-
-
-
 
 design:
   theme: sb2nov
@@ -111,23 +100,136 @@ design:
     font_family: New Computer Modern
     font_size: 10pt
     leading: 0.6em
-    alignment: justified
+    alignment: left
     date_and_location_column_alignment: right
   links:
     underline: true
     use_external_link_icon: false
-
+  header:
+    name_font_family: New Computer Modern
+    name_font_size: 30pt
+    name_bold: true
+    small_caps_for_name: false
+    photo_width: 3.5cm
+    vertical_space_between_name_and_connections: 0.7cm
+    vertical_space_between_connections_and_first_section: 0.7cm
+    horizontal_space_between_connections: 0.5cm
+    connections_font_family: New Computer Modern
+    separator_between_connections: ''
+    use_icons_for_connections: true
+    use_urls_as_placeholders_for_connections: false
+    make_connections_links: true
+    alignment: center
+  section_titles:
+    type: with-full-line
+    font_family: New Computer Modern
+    font_size: 1.4em
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.5cm
+    vertical_space_below: 0.3cm
+  entries:
+    date_and_location_width: 4.15cm
+    left_and_right_margin: 0.2cm
+    horizontal_space_between_columns: 0.1cm
+    vertical_space_between_entries: 1.2em
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+    short_second_row: false
+    show_time_spans_in: []
+  highlights:
+    bullet: ◦
+    nested_bullet: '-'
+    top_margin: 0.25cm
+    left_margin: 0.4cm
+    vertical_space_between_highlights: 0.25cm
+    horizontal_space_between_bullet_and_highlight: 0.5em
+    summary_left_margin: 0cm
+  entry_types:
+    one_line_entry:
+      template: '**LABEL:** DETAILS'
+    education_entry:
+      main_column_first_row_template: |-
+        **INSTITUTION**
+        *DEGREE in AREA*
+      degree_column_template:
+      degree_column_width: 1cm
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        *LOCATION*
+        *DATE*
+    normal_entry:
+      main_column_first_row_template: '**NAME**'
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        *LOCATION*
+        *DATE*
+    experience_entry:
+      main_column_first_row_template: |-
+        **POSITION**
+        *COMPANY*
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        *LOCATION*
+        *DATE*
+    publication_entry:
+      main_column_first_row_template: '**TITLE**'
+      main_column_second_row_template: |-
+        AUTHORS
+        URL (JOURNAL)
+      main_column_second_row_without_journal_template: |-
+        AUTHORS
+        URL
+      main_column_second_row_without_url_template: |-
+        AUTHORS
+        JOURNAL
+      date_and_location_column_template: DATE
 locale:
   language: en
   phone_number_format: national
   page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
   last_updated_date_template: Last updated in TODAY
   date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
   present: present
-  to: "–"
-
+  to: –
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - June
+    - July
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
 rendercv_settings:
-  date: '2026-01-01'
+  date: '2026-03-02'
   bold_keywords: []
   sort_entries: none
-

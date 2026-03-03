@@ -8,42 +8,94 @@ section.techs .stacks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 15px;
-    padding: 0 20px;
-}
-section.techs .stack {
-    display: flex;
-    flex-wrap: wrap;  
-    justify-content: center;
+    width: 85vw;
     gap: 30px;
 }
+section.techs .stack-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+section.techs .stack-header p{
+    white-space: nowrap;
+}
+section.techs .stack-header .stick{
+    height: 3px;
+    width: 100%;
+    background-color: #5f7b92;
+    background-color: #63a7ff5c;
+    border-radius: 30px;
+}
+
+section.techs .stack {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: center;
+    gap: 10px;
+}
+section.techs .stack .tech{
+    border: 2px solid #b5bbec0c; 
+    border-radius: 10px;
+    padding: 7px 15px;
+    width: 100px;
+    height: 90px;
+    background-color: var(--bg-dark);
+    box-shadow: var(--shadow);
+}
+
+.desktop .tech.tooltip::after {
+    top: calc(100% - 0px);
+    left: calc(100% - 10px);
+    transform: translateX(0);
+ 
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-sec);
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius: 100px;
+}
+
 
 .tech {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
     border-radius: 100%;
+    text-align: center;
 }
 .tech img {
-    width: 30px;
-    height: 30px;
     fill: white;
     filter: invert(0.7);
+}
+.tech p {
+    text-align: center;
 }
 
 
 @media (max-width: 768px) {
     .section.techs .stacks {
-        gap: 30px;
+        gap: 25px;
     }
     .section.techs .stack {
-        gap: 10px;
+        gap: 3px;
     }
-    .section.techs .tech img{
-        width: 23px;
-        height: 23px;
+    section.techs .stack .tech{
+        border-radius: 10px;
+        padding: 7px 15px;
+        width: 70px;
+        height: 70px;
+        gap: 5px;
+    }
+    section.techs .stack .tech p{
+        font-size: 9px;
     }
 }

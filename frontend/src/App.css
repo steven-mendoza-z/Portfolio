@@ -16,7 +16,7 @@
     border-radius: 10px;
     box-shadow: var(--shadow);
     overflow: hidden;
-    width: clamp(100px, 80vw, 800px);
+    width: clamp(100px, 90vw, 800px);
     text-decoration: none; 
     padding: 0;
     border: none;
@@ -202,6 +202,17 @@
 }
 .dark .icon {
     filter: invert(0.9);
+}
+
+.row-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.row-wrapper > * {
+  flex: 0 0 auto;
 }
 
 

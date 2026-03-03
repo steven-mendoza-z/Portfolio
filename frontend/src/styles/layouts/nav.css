@@ -15,7 +15,21 @@
     border-radius: 100px;
     box-shadow:  0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
     overflow: visible;
-      overflow: visible;
+    isolation: isolate; 
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+
+  height: 34px;
+  width: 40px;
+  border-radius: 100px;
+  background-color: var(--highlight2);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 0;
 }
 
 /* button */
@@ -24,6 +38,7 @@
     align-items: center;
     justify-content: start;
     position: relative;
+    z-index: 1;
 
     height: 34px;
     padding: 10px;
@@ -52,7 +67,7 @@
     width: fit-content;
     white-space: nowrap;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--text-sec);
     background-color: var(--bg);
@@ -61,11 +76,37 @@
 
 }
 
-.desktop .tooltip:hover::after { opacity: 1; }
+.desktop .tooltip:hover::after, .desktop .tooltip-left:hover:after { opacity: 1; }
+
+.desktop .tooltip-left::after{
+content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 5px);
+    right: calc(100%) ;
+    transform: translateX(50%);
+    opacity: 0;
+    pointer-events: none;
+
+    display: inline-block;
+    width: auto;
+    width: fit-content;
+    white-space: nowrap;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-sec);
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius: 100px;
+    line-height: 1;
+}
 
 
 /* text */
-.nav .selected { background-color: var(--highlight2); }
+.nav .selected { 
+    /* background-color: var(--highlight2);  */
+    background-color: transparent;
+}
 .selected p { color: var(--text-highlight);}
 
 .nav a p, .mobile .nav p { display: none;}
@@ -83,6 +124,12 @@
 .nav .selected img, .nav a:hover img, .light .nav .selected:hover img {filter: invert(1);}
 .light .nav a:hover img { filter: invert(0.2);}
 
+.nav[data-active="hero"]::before { transform: translateX(0px); }
+.nav[data-active="experience"]::before { transform: translateX(40px); }
+.nav[data-active="systems"]::before { transform: translateX(80px); }
+.nav[data-active="about"]::before { transform: translateX(120px); }
+.nav[data-active="techs"]::before { transform: translateX(160px); }
+.nav[data-active="socials"]::before { transform: translateX(200px); }
 
 
 /* Vertical */

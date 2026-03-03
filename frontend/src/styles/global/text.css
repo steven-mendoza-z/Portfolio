@@ -7,6 +7,10 @@
 .text-hl3 {
     color: var(--text-highlight3);
 }
+.text-hl4 {
+    color: var(--highlight4);
+}
+
 
 .text-main{
     color: var(--text-main);
@@ -23,19 +27,22 @@
 
 .h1 {
     font-weight: 800;
-    font-size: 34px;
+    font-size: 48px;
+    line-height: 0.8;
 }
 
 .h2 {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 800;
     line-height: 1.2;
-    color: var(--highlight4)
+}
+.hero .h2 {
+    color: var(--text-sec)
 }
 
 .h3 {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 34px;
+    font-weight: 800;
 }
 
 .h4 {
@@ -43,8 +50,8 @@
     font-weight: 600;
 }
 .section > .h4 {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
     /* letter-spacing: 1px; */
     /* word-spacing: 4px */
 }
@@ -58,7 +65,7 @@
 
 .h5 {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 800;
     /* color: var(--text-main); */
 }
 .h6 {
@@ -67,8 +74,8 @@
     color: var(--text-sec);
 }
 .h7 {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     /* color: var(--text-main); */
 }
 
@@ -85,20 +92,20 @@
 }
 
 .t-body2 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.1;
 }
 
 .t-body3 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.3;
 }
 
 .t-body4 {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 400;
     line-height: 1.4;
 }
 
@@ -115,9 +122,8 @@
 
 @media (max-width: 768px) {
     div .h1 {
-        /* font-size: 32px; */
         font-weight: 800;   
-        font-size: 28px;
+        font-size: 32px;
     }
     div .h1-sec {
         font-size: 9px;
@@ -137,13 +143,13 @@
     }
 
     div .h4 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         /* color: var(--text-main); */
     }
 
     div .h5 {
-        font-size: 12px;
+        font-size: 14px;
         /* color: var(--text-main); */
     }
 
@@ -180,12 +186,12 @@
     }
 
    .t-body4 {
-        font-size: 12px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 500;
     }
     .t-body6{
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 12px;
+        font-weight: 500;
         line-height: 1.2;
     }
 }

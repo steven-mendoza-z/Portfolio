@@ -1,24 +1,32 @@
-import ProjectBrief from "../components/projects/layouts/ProjectBrief";
-import Project from "../components/projects/layouts/Project";
+import SummarizedProject from "../components/projects/layouts/SummarizedProject";
+import DetailedProject from "../components/projects/layouts/DetailedProject";
 import { projects } from "../data/projects";
 
-export function Projects () {
-  return (
-    <section id="projects" className="section projects">
-        <h2 className="h4 text-hl2 text-shadow">Projects</h2>
-        
-        <div className="full-projects">
-          {projects.map((project) => (
-            project.type == "full" && <Project key={project.title} {...project} />
-          ))}
-        </div>
-        <div className="full-w row center">
-          {projects.map((project) => (
-            project.type == "brief" && <ProjectBrief key={project.title} {...project} />
-          ))}
+export function Projects() {
+  const detailedProjects = projects.filter(p => p.type === "full");
+  const summarizedProjects = projects.filter(p => p.type === "brief");
 
+  return (
+    <section id="systems" className="section projects">
+      <h2 className="h4 text-hl2 text-shadow">Systems I’ve Built</h2>
+
+      {detailedProjects.length > 0 && (
+        <div className="full-projects">
+          {detailedProjects.map(project => (
+            <DetailedProject key={project.title} {...project} />
+          ))}
         </div>
+      )}
+
+      {summarizedProjects.length > 0 && (
+        <div className="full-w row center">
+          {summarizedProjects.map(project => (
+            <SummarizedProject key={project.title} {...project} />
+          ))}
+        </div>
+      )}
     </section>
   );
-};
+}
+
 export default Projects;

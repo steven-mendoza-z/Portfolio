@@ -1,5 +1,14 @@
+/* Overview Section */
+.project-overview{
+  background-color: var(--bg-dark);
+  /* background-color: hsl(240, 11%, 15%); */
+  /* background-color: hsl(240, 11%, 16%); */
+  /* background-color: var(--bg-dark); */
+  border-radius: 20px 10px 10px 20px;
+  padding-left: 40px;
+}
 .project-description {
-    width: 75vw;
+  width: 500px;
 }
 
 
@@ -11,65 +20,10 @@
 .project-stack div{  
   background-color: #0000;
 }
-.project-stack img {
-  fill: #fff;
-  filter: invert(0.7);
-  width: 24px;
-  height: 25px;
-}
-
-
-/* Links */
-.project-links {
-    display: flex;
-    gap: 10px;
-}
-.mobile .project-links {
-  gap: 5px;
-}
-
-button.project-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;       
-
-  background-color: var(--highlight2);
-
-  padding: 6px 10px; 
-  border-radius: 10px;
-  border: none;
-  /* box-shadow: var(--shadow); */
-
-  color: var(--text-highlight2);
-  text-align: center;
-  z-index: 1;            
-
-  /* font-weight: 600;
-  font-size: 12px; */
-}
-a.project-link:hover {
-  background-color: var(--highlight1);
-}
-
-.project-links button::before,
-button.project-link::before {
-    border-radius: 20px;
-    z-index: 0;            
-}
-.mobile button.project-link{
-  font-size: 10px;
-  padding: 5px 6px;
-  border-radius: 20px;
-}
 
 
 /* Tags */
-.project-tags{
-  gap: 5px;
-}
-.project-tags p{
+.tag{
   font-size: 12px;
   font-weight: 400;
   color: var(--text-highlight);
@@ -80,3 +34,43 @@ button.project-link::before {
 }
 
 
+/* Links */
+button.project-link {
+  width: 130px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;  
+  gap: 8px;     
+
+  background-color: var(--highlight2);
+
+  padding: 8px 10px; 
+  border-radius: 50px;
+  border: none;
+  line-height: 1;
+
+  color: var(--text-highlight);
+  text-align: center;
+  z-index: 1;            
+}
+
+
+.project-link p {
+  width: calc(100% - 20px);
+}
+.project-link img {
+  position: absolute;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  filter: invert(70%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+@media (max-width: 768px) {
+  button.project-link {
+    width: 130px;
+  }
+}

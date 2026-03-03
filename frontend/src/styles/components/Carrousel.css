@@ -1,0 +1,86 @@
+.carouselN {
+  width: 100%;
+  position: relative;
+}
+
+.carouselN__stage {
+  position: relative;
+  width: 100%;
+  height: 31vw;
+  min-height: 220px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselN__hit:hover::before {
+  background: #0000;
+}
+.carouselN__hit.border-left:hover::before, .carouselN__hit.border-right:hover::before {
+  background: #a8beff65;
+  transition: background-color 0s ease;
+}
+
+.carouselN__item {
+  position: absolute;
+  will-change: transform, opacity, width, filter;
+}
+
+.carouselN__hit {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carouselN__clip {
+  overflow: hidden;
+  width: auto;
+  height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselN__card {
+  width: auto;
+  height: 100%;
+  display: flex;
+  border-radius: inherit;
+  place-items: center;
+}
+
+/* Peek: muestra el borde cercano al centro usando CSS var */
+.carouselN__clip.is-left .carouselN__card {
+  transform: translateX(calc(-100% + var(--peek)));
+}
+.carouselN__clip.is-right .carouselN__card {
+  transform: translateX(0);
+}
+
+/* dots */
+.carouselN__dots {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  /* margin-top: 10px; */
+}
+
+.carouselN__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  padding: 0;
+  background: rgba(249, 252, 252, 0.22);
+  cursor: pointer;
+}
+
+.carouselN__dot.is-active {
+  background: rgba(245, 251, 252, 0.47);
+}
+

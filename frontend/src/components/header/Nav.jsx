@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from "react";
-import Reveal from "../components/anims/Reveal";
+import { useEffect, useState } from "react";
+import Reveal from "../anims/Reveal";
 
-const SECTIONS = ["hero", "projects", "about", "techs", "socials"];
+const SECTIONS = ["hero", "experience", "systems", "about", "techs"];
 
 export function Nav() {
   const [active, setActive] = useState("hero");
 
   const handleClick = (id) => {
-    // setActive(id);
-
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", `#${id}`);
-    }
+    if (!el) return;
+
+    const y = window.scrollY + el.getBoundingClientRect().top;
+    smoothScrollTo(y, 200);
+
+    window.history.replaceState(null, "", `#${id}`);
   };
+
+
+  function smoothScrollTo(targetY, duration = 250) {
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+    const start = performance.now();
+
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      window.scrollTo(0, startY + diff * easeOutCubic(t));
+      if (t < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
 
   useEffect(() => {
     const els = SECTIONS
@@ -69,7 +86,8 @@ export function Nav() {
   }, []);
 
   return (
-    <Reveal className="nav" as="nav" aria-label="Section navigation">
+    <Reveal className="nav" as="nav" data-active={active} aria-label="Section navigation">
+
       <a
         href="#hero"
         aria-label="Hero section"
@@ -84,13 +102,26 @@ export function Nav() {
       </a>
 
       <a
-        href="#projects"
-        aria-label="Projects"
-        className={`row gap10 tooltip ${active === "projects" ? "selected" : ""}`}
-        data-tooltip="Projects"
+        href="#experience"
+        aria-label="Experience"
+        className={`row gap10 tooltip ${active === "experience" ? "selected" : ""}`}
+        data-tooltip="Experience"
         onClick={(e) => {
           e.preventDefault();
-          handleClick("projects");
+          handleClick("experience");
+        }}
+      >
+        <img src="icons/experience.svg" alt="experience" aria-hidden="true" />
+      </a>
+
+      <a
+        href="#systems"
+        aria-label="Systems"
+        className={`row gap10 tooltip ${active === "systems" ? "selected" : ""}`}
+        data-tooltip="Systems"
+        onClick={(e) => {
+          e.preventDefault();
+          handleClick("systems");
         }}
       >
         <img src="icons/architecture.svg" alt="projects" aria-hidden="true" />
@@ -120,19 +151,6 @@ export function Nav() {
         }}
       >
         <img src="icons/techs.svg" alt="techs" aria-hidden="true" />
-      </a>
-
-      <a
-        href="#socials"
-        aria-label="Socials"
-        className={`row gap10 tooltip ${active === "socials" ? "selected" : ""}`}
-        data-tooltip="Contact me"
-        onClick={(e) => {
-          e.preventDefault();
-          handleClick("socials");
-        }}
-      >
-        <img src="icons/socials.svg" alt="socials" aria-hidden="true" />
       </a>
     </Reveal>
   );

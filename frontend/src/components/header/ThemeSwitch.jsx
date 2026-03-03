@@ -6,7 +6,7 @@ export function ThemeSwitch({ className = "" }) {
   const getInitialTheme = () => {
     const saved = localStorage.getItem("theme");
     if (saved) return saved;
-    if (window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
+    // if (window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
     return "dark";
   };
 

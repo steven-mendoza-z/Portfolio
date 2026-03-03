@@ -1,18 +1,25 @@
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import ProjectPreview from "./ProjectPreview";
+import DetailedProjectMobile from "./DetailedProjectMobile";
 import Reveal from "../../anims/Reveal";
 
-const ProjectDetails = lazy(() => import("../components/ProjectDetails"));
+const DetailedProjectDesktop = lazy(() => import("./DetailedProjectDesktop"));
 
 export default function Project({
   title,
   subtitle,
   description,
+
   mainImage,
-  images,
+  overviewImages,
+  galleryImages,
+
   stack,
   problemAnalysis,
+
   architecture,
+  keyDecisions,
+  reliability,
+  
   links,
   tags
 }) {
@@ -60,7 +67,7 @@ export default function Project({
         if (!prefetchedRef.current && ratio >= 0.2) {
           prefetchedRef.current = true;
           // ⚡ descarga el chunk antes de que lo necesites
-          import("../components/ProjectDetails");
+          import("./DetailedProjectDesktop");
         }
 
         // ✅ Mostrar details cuando está muy visible
@@ -92,17 +99,23 @@ export default function Project({
   }, [isDesktop]);
 
   return (
-    <Reveal className="full-w flex center">
+    <div className="full-w flex center">
         {isDesktop ? (
-            <Suspense fallback={<ProjectPreview mainImage={mainImage} title={title} subtitle={subtitle} description={description} links={links} />}>
-              <ProjectDetails
-                mainImage={mainImage}
+            <Suspense fallback={<DetailedProjectMobile mainImage={mainImage} title={title} subtitle={subtitle} description={description} links={links} />}>
+              <DetailedProjectDesktop
                 title={title}
                 subtitle={subtitle}
                 description={description}
-                images={images}
+
+                mainImage={mainImage}
+                overviewImages={overviewImages}
+                galleryImages={galleryImages}
+
                 problemAnalysis={problemAnalysis}
                 architecture={architecture}
+                keyDecisions={keyDecisions}
+                reliability={reliability}
+
                 stack={stack}
                 links={links}
                 tags={tags}
@@ -110,8 +123,8 @@ export default function Project({
             </Suspense>
   
         ) : (
-          <ProjectPreview mainImage={mainImage} title={title} subtitle={subtitle} description={description} links={links} />
+          <DetailedProjectMobile mainImage={mainImage} title={title} subtitle={subtitle} description={description} links={links} />
         )}
-    </Reveal>
+    </div>
   );
 }

@@ -123,3 +123,6 @@ pylint-report.txt
 pylint-global.txt
 
 
+
+externalData/
+externalData/*
