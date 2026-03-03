@@ -4,7 +4,7 @@
 @import url('./styles/global/text.css');
 @import url('./styles/global/motion.css');
 
-@import url('./styles/layouts/mobile.css');
+/* @import url('./styles/layouts/mobile.css'); */
 @import url('./styles/layouts/nav.css');
 @import url('./styles/layouts/footer.css');
 
@@ -18,7 +18,7 @@
 @import url('./styles/components/Carrousel.css');
 @import url('./styles/components/ThemeSwitch.css');
 
-@import url('./styles/components/projects/ProjectLayouts.css');
+/* @import url('./styles/components/projects/ProjectLayouts.css'); */
 @import url('./styles/components/projects/ImageCarousel.css');
 @import url('./styles/components/projects/ProjectDetails.css');
 @import url('./styles/components/projects/ProjectNav.css');
