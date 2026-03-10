@@ -45,7 +45,7 @@ export const projects = [
       "View Platform": "https://hermes.purpleblue.site/",
       "Package (PyPI)": "https://pypi.org/project/hermes-deployer/",
       "Platform Repo": "https://github.com/steven-mendoza-z/hermes-deploy-service.git",
-      "Package Repo": "https://github.com/steven-mendoza-z/DHermes.git",
+      "Package Repo": "https://github.com/steven-mendoza-z/hermes-deployer.git",
     },
     tags: ["System Design", "DevOps", "Orchestration", "Infrastructure"],
 
@@ -108,7 +108,7 @@ export const projects = [
     ],
     links: {
       "View App": "https://quackternion.purpleblue.site/",
-      "Repo": "https://github.com/steven-mendoza-z/Quackternion.git",
+      "Repo": "https://github.com/steven-mendoza-z/quackternion.git",
     },
     stack: [
       techs.django,
@@ -159,7 +159,7 @@ export const projects = [
     ],
     links: {
       "View App": "https://eulerian-hades.purpleblue.site/",
-      "Repo": "https://github.com/steven-mendoza-z/Eulerian-hades.git",
+      "Repo": "https://github.com/steven-mendoza-z/eulerian-hades.git",
     },
     stack: [
       techs.django,
