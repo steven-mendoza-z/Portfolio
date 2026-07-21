@@ -122,7 +122,8 @@ static/
 pylint-report.txt
 pylint-global.txt
 
+.agents/
+.agents/*
 
-
-externalData/
-externalData/*
+external-data/
+external-data/*

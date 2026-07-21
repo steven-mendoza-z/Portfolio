@@ -13,22 +13,12 @@
     "deploy": "vite build && copy dist\\index.html dist\\404.html && echo steven-mendoza.com> dist\\CNAME && gh-pages -d dist"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.3",
-    "@react-three/fiber": "^9.3.0",
-    "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
-    "axios": "^1.11.0",
-    "file-saver": "^2.0.5",
     "framer-motion": "^12.23.12",
-    "install": "^0.13.0",
-    "npm": "^11.5.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-dropzone": "^14.3.8",
-    "react-responsive": "^10.0.1",
-    "react-router-dom": "^7.8.0",
-    "three": "^0.179.1"
+    "react-router-dom": "^7.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
