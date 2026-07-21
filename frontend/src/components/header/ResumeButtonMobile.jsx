@@ -1,5 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
-
 export function ResumeButtonMobile() {
   return (
     <div className="download-cv">

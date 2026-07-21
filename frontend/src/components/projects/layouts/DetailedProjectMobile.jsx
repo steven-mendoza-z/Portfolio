@@ -10,7 +10,7 @@ function DetailedProjectMobile({ mainImage, title, subtitle, description, links,
         <img
           className="card-img"
           src={`projects/${mainImage}`}
-          alt={name}
+          alt={title}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           width="640"

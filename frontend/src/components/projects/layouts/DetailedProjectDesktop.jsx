@@ -4,7 +4,7 @@ import { ManualCarousel } from "../../ui/ManualCarousel";
 import ProjectOverview from "../sections/ProjectOverview";
 import Reveal from "../../anims/Reveal";
 
-export function DetailedProjectMobile({
+export function DetailedProjectDesktop({
   mainImage,
   title,
   subtitle,
@@ -14,7 +14,6 @@ export function DetailedProjectMobile({
   galleryImages = [],
 
   stack = [],
-  problemAnalisis = null,
   architecture = null,
   keyDecisions = null,
   reliability = null,
@@ -22,15 +21,6 @@ export function DetailedProjectMobile({
   tags = [],
 }) {
   const [section, setSection] = useState("Overview");
-  const selectSection = (next) => setSection(next);
-
-  const hasStack = stack && stack.length > 0;
-  const hasTags = stack && tags.length > 0;
-  
-  const openLink = (url) => {
-    if (!url) return;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
 
   const nav = [
     "Overview",
@@ -112,4 +102,4 @@ export function DetailedProjectMobile({
   );
 }
 
-export default DetailedProjectMobile;
+export default DetailedProjectDesktop;

@@ -1,3 +1,10 @@
+/* New text system */
+
+
+
+/* ----- */
+
+/* Color */
 .text-hl {
     color: var(--text-highlight);
 }
@@ -56,11 +63,6 @@
 
 
 .h5 {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.h5 {
     font-size: 13px;
     font-weight: 800;
 }
@@ -112,24 +114,20 @@
     div .h3 {
         font-size: 14px;
         font-weight: 600;
-        /* color: var(--text-main); */
     }
 
     div .h4 {
         font-size: 20px;
         font-weight: 700;
-        /* color: var(--text-main); */
     }
 
     div .h5 {
         font-size: 14px;
-        /* color: var(--text-main); */
     }
 
     .h7 {
         font-size: 10px;
         font-weight: 600;
-        /* color: var(--text-main); */
     }
 
     .t-body2 {

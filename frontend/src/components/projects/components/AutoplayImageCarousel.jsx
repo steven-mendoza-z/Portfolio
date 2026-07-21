@@ -2,47 +2,37 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export function AutoplayImageCarousel({ mainImg, images }) {
+  const slides = images.length > 0 ? images : mainImg ? [mainImg] : [];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isManual, setIsManual] = useState(false); // controla si es manual
-  const intervalRef = useRef(null);
+  const timeoutRef = useRef(null);
   const [bounce, setBounce] = useState(false);
-  const hasCarousel = images.length > 1;
+  const hasCarousel = slides.length > 1;
 
-  const onImageChange = () => {
-    setBounce(true);
-    setTimeout(() => setBounce(false), 400);
-  };
-
-  const changeImage = (newIndex) => {
-    setCurrentIndex(newIndex);
-    if (onImageChange) onImageChange(newIndex); // notifica al padre
-  };
-
-  const prevImage = () => {
-    setIsManual(true); // ahora es manual
-    changeImage(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
-  };
-
-  const nextImage = () => {
-    setIsManual(true); // ahora es manual
-    changeImage(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
-  };
-
-  // inicializa auto-slide solo si no está en modo manual
   useEffect(() => {
-    if (!isManual) {
-      intervalRef.current = setInterval(() => {
-        changeImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-      }, 3000);
-    }
-    return () => clearInterval(intervalRef.current);
-  }, [isManual, images.length]);
+    if (!hasCarousel) return;
+
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setBounce(true);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [hasCarousel, slides.length]);
+
+  useEffect(() => {
+    if (!bounce) return;
+
+    timeoutRef.current = setTimeout(() => setBounce(false), 400);
+    return () => clearTimeout(timeoutRef.current);
+  }, [bounce]);
+
+  if (!slides.length) return null;
 
   return (
     <>
       {!hasCarousel ? (
           <div className="image-carousel">
-            <img className="card-img" src={`projects/${images[0]}`} alt={name} />
+            <img className="card-img" src={`projects/${slides[0]}`} alt="" loading="lazy" decoding="async" />
           </div>
         ) : (
         <motion.div
@@ -53,9 +43,11 @@ export function AutoplayImageCarousel({ mainImg, images }) {
 
           <div className="carousel">
           <img
-            src={`projects/${images[currentIndex]}`}
+            src={`projects/${slides[currentIndex]}`}
             alt={`slide-${currentIndex}`}
             className="card-img"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         </motion.div>

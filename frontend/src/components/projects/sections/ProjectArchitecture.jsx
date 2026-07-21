@@ -1,32 +1,38 @@
-import Tech from "../../ui/Tech";
-import ImageCarousel from "../components/ImageCarousel";
+import { ManualCarousel } from "../../ui/ManualCarousel";
 
-export function ProjectArchitecture({architecture}) {
-    
-  const hasStack = stack && stack.length > 0;
-  const hasTags = stack && tags.length > 0;
-  
-  const openLink = (url) => {
-    if (!url) return;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+export function ProjectArchitecture({ architecture = [] }) {
+  if (!architecture.length) return null;
 
   return (
     <div className="project-overview row center gap30">
-        <Carrousel
-            items={architecture}
-            renderItem={(src) => (
-                <img
-                key={title}
+      <ManualCarousel
+        items={architecture}
+        renderItem={(item) => {
+          const src = typeof item === "string" ? item : item.image;
+          const title = typeof item === "string" ? "" : item.title;
+
+          return (
+            <div className="project-diagram column">
+              <img
                 src={src}
-                alt=""
+                alt={title}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 draggable={false}
                 className="card-img"
-                />
-            )}
-        />     
+                loading="lazy"
+                decoding="async"
+              />
+              {title && (
+                <div className="diagram-header">
+                  <p className="h4 text-hl4">{title}</p>
+                </div>
+              )}
+            </div>
+          );
+        }}
+      />
     </div>
-  )};
+  );
+}
 
 export default ProjectArchitecture;

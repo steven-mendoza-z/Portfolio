@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
 import ImageCarousel from "../components/AutoplayImageCarousel";
 import ProjectLinks from "../components/ProjectLinks";
 
@@ -9,19 +7,9 @@ export function SummarizedProject ({
   description,
   images = [],
   stack = [],
-  problemAnalisis = null,
-  architecture = null,
   links = {},
 }) {
-  const [section, setSection] = useState("summary");
-  const selectSection = (next) => setSection(next);
-
   const hasStack = stack && stack.length > 0;
-  
-  const openLink = (url) => {
-    if (!url) return;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
 
   return (
         <div className="project-box column center brief">

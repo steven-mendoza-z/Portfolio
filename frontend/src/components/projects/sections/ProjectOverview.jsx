@@ -17,11 +17,6 @@ export function ProjectOverview({
   const hasStack = stack && stack.length > 0;
   const hasTags = stack && tags.length > 0;
   
-  const openLink = (url) => {
-    if (!url) return;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <div className="project-overview row center gap30">
         <div className="project-description column-left gap20">
