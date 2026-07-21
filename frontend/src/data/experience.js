@@ -7,7 +7,7 @@ export const experience = [
     role: "Software Engineer (Full-Stack)",
     date: "Oct 2025 – Present",
     location: "Remote",
-    logo: "experience/netforemost.jpg",
+    logo: "experience/netforemost.webp",
 
         
     description:

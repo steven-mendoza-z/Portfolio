@@ -7,7 +7,7 @@ export const projects = [
     type: "full",
     title: "Hermes Services",
     subtitle: "(PyPI Package Framework & Dev-Friendly Platform)",
-    mainImage: "hermes-service/hermes_mockup1.png",
+    mainImage: "hermes-service/mockups/hermes-mockup-1.webp",
 
 
     // Overview Section
@@ -15,8 +15,8 @@ export const projects = [
       "A declarative DevOps framework that orchestrates multi-server deployments using YAML-defined infrastructure specifications. Includes a Python CLI (published on PyPI) and a web platform to automate provisioning, deployment execution, and CI/CD workflows."
     ],
     overviewImages: [
-      "hermes-service/hermes_mockup1.png",
-      "hermes-service/hermes_mockup2.png",
+      "hermes-service/mockups/hermes-mockup-1.webp",
+      "hermes-service/mockups/hermes-mockup-2.webp",
     ],
     stack: [
       {
@@ -53,10 +53,10 @@ export const projects = [
     // Images Section
     galleryImages: [
       // "hermes-service/network-diagram.webp",
-      "hermes-service/architecture/context_diagram.png",
-      "hermes-service/architecture/containers_diagram.png",
-      "hermes-service/architecture/cicd_pipelines.png",
-      "hermes-service/hermes_view1.png",
+      "hermes-service/architecture/context-diagram.webp",
+      "hermes-service/architecture/containers-diagram.webp",
+      "hermes-service/architecture/cicd-pipelines.webp",
+      "hermes-service/mockups/hermes-mockup-2-variant.webp",
     ],
 
     // context: {
@@ -95,7 +95,7 @@ export const projects = [
     // Meta + Content
     type: "full",
     title: "Quackternion",
-    mainImage: "quackternion/quackternion_mockup1.png",
+    mainImage: "quackternion/mockups/quackternion-mockup-1.webp",
 
 
     // Overview Section
@@ -103,8 +103,8 @@ export const projects = [
       "A mathematical simulation platform that computes quaternion-based spatial transformations, persists simulation states, and generates automated PDF/LaTeX exports with step-by-step results."
     ],
     overviewImages: [
-      "quackternion/quackternion_mockup1.png",
-      "quackternion/quackternion_mockup2.png",
+      "quackternion/mockups/quackternion-mockup-1.webp",
+      "quackternion/mockups/quackternion-mockup-2.webp",
     ],
     links: {
       "View App": "https://quackternion.purpleblue.site/",
@@ -134,8 +134,8 @@ export const projects = [
 
     // Images Section
     galleryImages:[
-      "quackternion/quackternion_mockup3.png",
-      "quackternion/quackternion_mockup4.png",
+      "quackternion/mockups/quackternion-mockup-3.webp",
+      "quackternion/mockups/quackternion-mockup-4.webp",
     ],
 
   },
@@ -144,7 +144,7 @@ export const projects = [
     // Meta + Content
     type: "full",
     title: "Eulerian Hades",
-    mainImage: "eulerian/eulerian_mockup1.png",
+    mainImage: "eulerian/mockups/eulerian-mockup-1.webp",
 
 
     // Overview Section
@@ -152,10 +152,10 @@ export const projects = [
       "A modular learning platform for structured educational content and problem sets, featuring a mathematical expression engine for evaluating user inputs."    
     ],
     overviewImages: [
-      "eulerian/eulerian_mockup1.png",
-      "eulerian/eulerian_mockup2.png",
-      "eulerian/eulerian_mockup3.png",
-      "eulerian/eulerian_mockup4.png",
+      "eulerian/mockups/eulerian-mockup-1.webp",
+      "eulerian/mockups/eulerian-mockup-2.webp",
+      "eulerian/mockups/eulerian-mockup-3.webp",
+      "eulerian/mockups/eulerian-mockup-4.webp",
     ],
     links: {
       "View App": "https://eulerian-hades.purpleblue.site/",
@@ -182,10 +182,10 @@ export const projects = [
 
     // Images Section
     galleryImages: [
-      "eulerian/eulerian_view1.png",
-      "eulerian/eulerian_view2.png",
-      "eulerian/eulerian_view3.png",
-      "eulerian/eulerian_view4.png",
+      "eulerian/mockups/eulerian-mockup-1.webp",
+      "eulerian/mockups/eulerian-mockup-2.webp",
+      "eulerian/mockups/eulerian-mockup-3.webp",
+      "eulerian/mockups/eulerian-mockup-4.webp",
     ],
 
   },
