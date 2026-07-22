@@ -6,7 +6,7 @@ import Grid from "../components/atomics/Grid";
 export function Packages() {
   return (
     <section id="packages" className="section packages">
-      <Text as="h2" size="md" color="color-2" className="text-shadow">Packages</Text>
+      <Text as="h2" size="md" color="color-2" className="text-shadow">My packages</Text>
 
       <Grid
         minColumnWidth={420}
