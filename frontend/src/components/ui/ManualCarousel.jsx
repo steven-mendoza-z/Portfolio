@@ -1,7 +1,13 @@
 // ManualCarousel.jsx
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion as fm, useReducedMotion } from "framer-motion";
 import { motion as sysMotion } from "../../motion/index";
+
+const radiusTokens = Object.freeze({
+  sm: 10,
+  md: 14,
+  xl: 22,
+});
 
 /**
  * ManualCarousel (1 motion element por item)
@@ -152,7 +158,7 @@ function poseFor(slot, { peekPx, xOffset }) {
       scale: 1,
       blur: 0,
       zIndex: 3,
-      radius: 14,
+      radius: radiusTokens.md,
       pointer: "auto",
     };
   }
@@ -167,7 +173,7 @@ function poseFor(slot, { peekPx, xOffset }) {
       scale: 0.985,
       blur: 1,
       zIndex: 2,
-      radius: 10,
+      radius: radiusTokens.sm,
       pointer: "auto",
     };
   }
@@ -181,7 +187,7 @@ function poseFor(slot, { peekPx, xOffset }) {
     scale: 0.98,
     blur: 2,
     zIndex: 0,
-    radius: 22,
+    radius: radiusTokens.xl,
     pointer: "none",
   };
 }

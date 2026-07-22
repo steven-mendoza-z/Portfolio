@@ -11,8 +11,8 @@
 
     background-color: var(--bg-light);
     border: 5px solid var(--bg-light);
-    border-radius: 100px;
-    box-shadow:  0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow);
     overflow: visible;
     isolation: isolate; 
 }
@@ -33,7 +33,7 @@
     padding: 10px;
     background-color: #0000;
     border: none;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
     overflow: visible;
 }
 .project-nav a:hover::before {
@@ -59,10 +59,10 @@
     line-height: 1;
     font-size: 12px;
     font-weight: 600;
-    color: var(--text-sec);
+    color: var(--text-color-3);
     background-color: var(--bg);
     padding: 10px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
     z-index: 100;
 
     transition: 
@@ -89,13 +89,11 @@
 .project-nav .selected { 
     background-color: transparent;
 }
-.selected p { color: var(--text-highlight);}
+.selected p { color: var(--text-color-1);}
 
 
 /* img */
 .project-nav img {
-    width: 20px;
-    height: 20px;
     filter: invert(0.6);
 }
 
@@ -115,8 +113,8 @@
 
   background-color: var(--bg-light);
   border: 5px solid var(--bg-light);
-  border-radius: 100px;
-  box-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow);
 }
 
 .project-nav button {
@@ -129,5 +127,5 @@
   padding: 10px;
   background-color: transparent;
   border: none;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
 }

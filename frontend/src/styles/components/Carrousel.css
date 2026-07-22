@@ -73,7 +73,7 @@
 .carouselN__dot {
   width: 10px;
   height: 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   border: 0;
   padding: 0;
   background: rgba(249, 252, 252, 0.22);

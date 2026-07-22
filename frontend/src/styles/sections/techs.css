@@ -14,9 +14,9 @@ section.techs .stacks {
 section.techs .stack-container {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     gap: 10px;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
 }
 
 section.techs .stack-header p{
@@ -27,7 +27,7 @@ section.techs .stack-header .stick{
     width: 100%;
     background-color: #5f7b92;
     background-color: #63a7ff5c;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
 }
 
 section.techs .stack {
@@ -40,10 +40,11 @@ section.techs .stack {
 }
 section.techs .stack .tech{
     border: 2px solid #b5bbec0c; 
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     padding: 7px 15px;
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 110px;
+    /* width: 100px; */
     background-color: var(--bg-dark);
     box-shadow: var(--shadow);
 }
@@ -55,10 +56,10 @@ section.techs .stack .tech{
  
     font-size: 12px;
     font-weight: 600;
-    color: var(--text-sec);
+    color: var(--text-color-3);
     background-color: var(--bg);
     padding: 10px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
 }
 
 
@@ -69,7 +70,7 @@ section.techs .stack .tech{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border-radius: 100%;
+    border-radius: var(--radius-round);
     text-align: center;
 }
 .tech img {
@@ -89,13 +90,13 @@ section.techs .stack .tech{
         gap: 3px;
     }
     section.techs .stack .tech{
-        border-radius: 10px;
+        border-radius: var(--radius-sm);
         padding: 7px 15px;
         width: 70px;
-        height: 70px;
+        height: 90px;
         gap: 5px;
     }
     section.techs .stack .tech p{
-        font-size: 9px;
+        font-size: 10px;
     }
 }

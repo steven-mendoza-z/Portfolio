@@ -1,4 +1,5 @@
 import { ManualCarousel } from "../../ui/ManualCarousel";
+import Text from "../../atomics/Text";
 
 export function ProjectArchitecture({ architecture = [] }) {
   if (!architecture.length) return null;
@@ -24,7 +25,7 @@ export function ProjectArchitecture({ architecture = [] }) {
               />
               {title && (
                 <div className="diagram-header">
-                  <p className="h4 text-hl4">{title}</p>
+                  <Text size="md" color="highlight-1">{title}</Text>
                 </div>
               )}
             </div>

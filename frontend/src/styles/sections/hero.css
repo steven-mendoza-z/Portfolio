@@ -7,7 +7,7 @@
 .section.hero .profile-img {
     width: 280px;
     height: 280px;
-    border-radius: 100%;
+    border-radius: var(--radius-round);
     border: 10px solid var(--border);
 }
 /* .profile-img {
@@ -32,20 +32,11 @@
     gap: 0;
     /* gap: 8px; */
 }
-.hero-subtitle :first-child {
-    font-size: 38px;
-    font-weight: 800;
-    color: var(--text-main);
-    color: var(--highlight4)
-}
-
 .hero-desc {
     width: clamp(550px, 65%, 1000px);
 }
 
 .hero-socials {
-    width: 35px;
-    height: 35px;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -59,8 +50,6 @@ a.social:hover::before{
 }
 
 .icon-inverter {
-    width: 35px;
-    height: 35px;
     filter: invert(0.75);
 }
 .icon-inverter:hover {
@@ -92,13 +81,7 @@ a.social:hover::before{
         gap: 0px;
     }
     .icon-inverter {
-        width: 30px;
-        height: 30px;
         filter: invert(0.75);
-    }
-    .hero-subtitle :first-child {
-        font-size: 22px;
-        font-weight: 800;
     }
     .hero-content{
         gap: 20px;

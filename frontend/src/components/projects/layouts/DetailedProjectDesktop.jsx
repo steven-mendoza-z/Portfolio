@@ -3,6 +3,7 @@ import ProjectNav from "../components/ProjectNav";
 import { ManualCarousel } from "../../ui/ManualCarousel";
 import ProjectOverview from "../sections/ProjectOverview";
 import Reveal from "../../anims/Reveal";
+import Text from "../../atomics/Text";
 
 export function DetailedProjectDesktop({
   mainImage,
@@ -68,13 +69,15 @@ export function DetailedProjectDesktop({
                   <img
                     key={arch.title}
                     src={arch.image}
-                    alt=""
+                    alt={arch.title}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     draggable={false}
                     className="card-img"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="diagram-header">
-                    <p className="h4 text-hl4">{arch.title}</p>
+                    <Text size="md" color="highlight-1">{arch.title}</Text>
                   </div>
                 </div>
               )}
@@ -92,6 +95,8 @@ export function DetailedProjectDesktop({
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   draggable={false}
                   className="card-img"
+                  loading="lazy"
+                  decoding="async"
                 />
               )}
             />      

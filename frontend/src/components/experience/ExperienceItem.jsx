@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import Techs from "../../pages/Techs";
 import Tech from "../ui/Tech";
-import Tag from "../ui/Tag";
 import Tags from "../ui/Tags";
+import Text from "../atomics/Text";
 import renderHighlightedText from "../../helpers/RenderHighlightedText";
 
 export function ExperienceItem({
@@ -27,42 +26,37 @@ export function ExperienceItem({
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      {/* Header */}
       <div className="experience-card card row gap30">
+        {/* Logo */}
         {logo && (
           <div className="logo-container">
-            <img
-              src={logo}
-              alt={company}
-              className="experience-logo"
-            />
+            <img src={logo} alt={company} className="experience-logo"/>
           </div>
         )}
 
+        {/* Body */}
         <div className="experience-content">
-          <div className="experience-header column-left">
-            <p className="h2 text-hl4">{role}</p>
-            <p className="h4 text-hl2">{company}</p>
-            <p className="t-body3 text-hl3">
-              {location} · {date}
-            </p>
+          <div className="column-left">
+            <Text size="md" color="highlight-1" adaptative bold>{role}</Text>
+            <Text size="md" color="color-2" bold>{company}</Text>
+            <Text size="sm" color="highlight-2" adaptative semibold>{location} · {date}</Text>
           </div>
 
           <div className="experience-body">
             <div className="experience-desc column-left gap20">
               {/* Description */}
               {description && (
-                <p className="t-body4 text-hl3">
-                  {renderHighlightedText(description, "keywords")}
-                </p>
+                <Text size="sm" color="highlight-2" adaptative>
+                  {renderHighlightedText(description)}
+                </Text>
               )}
-                {/* Bullets */}
+              {/* Bullets */}
               {bullets.length > 0 && (
                 <ul className="experience-bullets column-left gap5">
                   {bullets.map((item, idx) => (
-                    <li key={idx} className="t-body5 text-hl3">
-                      {renderHighlightedText(item, "keywords")}
-                    </li>
+                    <Text as="li" key={idx} size="xs" color="highlight-2">
+                      {renderHighlightedText(item)}
+                    </Text>
                   ))}
                 </ul>
               )}
@@ -75,7 +69,7 @@ export function ExperienceItem({
               {hasStack && (
                 <div className="project-stack gap20 row">
                   {techs.map((tech) => (
-                    <Tech key={tech.name ?? tech.id ?? JSON.stringify(tech)} tech={tech} size={25} />
+                    <Tech key={tech.name ?? tech.id ?? JSON.stringify(tech)} tech={tech} size="xl" />
                   ))}
                 </div>
               )}

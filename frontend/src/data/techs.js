@@ -15,6 +15,7 @@ export const gunicorn = { img: "techs/backend/gunicorn.svg", name: "Gunicorn" };
 export const jwt = { img: "techs/backend/jwt.svg", name: "JWT" };
 export const oauth = { img: "techs/backend/oauth.svg", name: "OAuth2" };
 export const dotnet = { img: "techs/backend/dotnet.svg", name: ".NET", tooltip: ".NET (ASP.NET Core)" };
+export const supabase = { img: "techs/backend/supabase.svg", name: "Supabase", tooltip: "Supabase" };
 
 // devops
 export const git = { img: "techs/devops/git.svg", name: "Git" };
@@ -39,7 +40,7 @@ export const latex = { img: "techs/others/latex.svg", name: "LaTeX" };
 export const techs = [
   {
     category: "Backend & APIs",
-    items: [python, django, jwt, oauth, dotnet, postgresql, redis, mongodb],
+    items: [python, django, jwt, oauth, dotnet, supabase, postgresql, redis, mongodb],
   },
   {
     category: "DevOps & Infrastructure",

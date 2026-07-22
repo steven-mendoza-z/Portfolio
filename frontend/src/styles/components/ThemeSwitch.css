@@ -1,10 +1,10 @@
 .theme-switch-wrapper .switch {
-  font-size: 17px;
+  font-size: 16px;
   position: relative;
   display: inline-block;
   width: 3.5em;
   height: 2em;
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .theme-switch-wrapper .switch input {
@@ -21,7 +21,7 @@
   bottom: 0;
   background-color: var(--bg);
   transition: 0.4s;
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
 }
 .theme-switch-wrapper .slider:before {
@@ -29,27 +29,26 @@
   content: "";
   height: 1em;
   width: 1em;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   left: 0.5em;
   bottom: 0.5em;
   transition: 0.4s;
   transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
-  box-shadow: inset 8px -4px 0px 0px var(--text-main);
+  box-shadow: inset 8px -4px 0px 0px var(--text-color-2);
 }
 .theme-switch-wrapper .switch input:checked + .slider {
   background-color: var(--highlight2);
 }
 .theme-switch-wrapper .switch input:checked + .slider:before {
   transform: translateX(1.5em);
-  box-shadow: inset 15px -4px 0px 15px #0000;
   box-shadow: inset 15px -4px 0px 15px #edac63;
   /* background-image: url("duck.png"); */
   background-repeat: no-repeat;
   background-size: 20px;
 }
 .theme-switch-wrapper .star {
-  background-color: var(--text-main);
-  border-radius: 50%;
+  background-color: var(--text-color-2);
+  border-radius: var(--radius-round);
   position: absolute;
   width: 5px;
   transition: all 0.4s;
@@ -83,7 +82,5 @@
 }
 
 .icon {
-  width: 15px;
-  height: 15px;
   z-index: 1000;
 }

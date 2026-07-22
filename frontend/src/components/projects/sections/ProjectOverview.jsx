@@ -2,6 +2,7 @@ import Tags from "../../ui/Tags";
 import Tech from "../../ui/Tech";
 import AutoplayImageCarousel from "../components/AutoplayImageCarousel";
 import ProjectLinks from "../components/ProjectLinks";
+import Text from "../../atomics/Text";
 
 export function ProjectOverview({
   mainImage,
@@ -24,11 +25,11 @@ export function ProjectOverview({
             <div className="column-left full-w gap10">
                 <div className="column-left full-w row gap20">
                     <div className="column-left">
-                        <h3 className="h3 text-hl4">{title}</h3>
-                        <p className="h4 text-hl">{subtitle}</p>
+                        <Text as="h3" size="lg" color="highlight-1" adaptative bold>{title}</Text>
+                        <Text size="sm" color="color-1" semibold>{subtitle}</Text>
                     </div>                
                 </div>
-                <p className="t-body3 text-hl3">{description}</p>
+                <Text size="sm" color="highlight-2" adaptative>{description}</Text>
             </div>
 
             <div className="full-w column-left gap10">
@@ -41,7 +42,7 @@ export function ProjectOverview({
                 {hasStack && (
                     <div className="project-stack row">
                     {stack.map((tech) => (
-                        <Tech key={tech.name} tech={tech} size={20}/>
+                        <Tech key={tech.name} tech={tech} size="lg"/>
                     ))}
                     </div>
                 )}

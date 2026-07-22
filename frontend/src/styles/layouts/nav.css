@@ -12,8 +12,8 @@
 
     background-color: var(--bg-light);
     border: 5px solid var(--bg-light);
-    border-radius: 100px;
-    box-shadow:  0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow);
     overflow: visible;
     isolation: isolate; 
 }
@@ -26,7 +26,7 @@
 
   height: 34px;
   width: 40px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   background-color: var(--highlight2);
   transition: transform 0.3s cubic-bezier(.4,0,.2,1);
   z-index: 0;
@@ -44,7 +44,7 @@
     padding: 10px;
     background-color: #0000;
     border: none;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
     overflow: visible;
 }
 .nav a:hover::before {
@@ -69,10 +69,10 @@
 
     font-size: 12px;
     font-weight: 600;
-    color: var(--text-sec);
+    color: var(--text-color-3);
     background-color: var(--bg);
     padding: 10px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
 
 }
 
@@ -94,10 +94,10 @@ content: attr(data-tooltip);
 
     font-size: 12px;
     font-weight: 600;
-    color: var(--text-sec);
+    color: var(--text-color-3);
     background-color: var(--bg);
     padding: 10px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
     line-height: 1;
 }
 
@@ -107,7 +107,7 @@ content: attr(data-tooltip);
     /* background-color: var(--highlight2);  */
     background-color: transparent;
 }
-.selected p { color: var(--text-highlight);}
+.selected p { color: var(--text-color-1);}
 
 .nav a p, .mobile .nav p { display: none;}
 /* .nav a:hover p { display: flex;} */
@@ -115,8 +115,6 @@ content: attr(data-tooltip);
 
 /* img */
 .nav img {
-    width: 20px;
-    height: 20px;
     filter: invert(0.6);
 }
 
@@ -127,9 +125,10 @@ content: attr(data-tooltip);
 .nav[data-active="hero"]::before { transform: translateX(0px); }
 .nav[data-active="experience"]::before { transform: translateX(40px); }
 .nav[data-active="systems"]::before { transform: translateX(80px); }
-.nav[data-active="about"]::before { transform: translateX(120px); }
-.nav[data-active="techs"]::before { transform: translateX(160px); }
-.nav[data-active="socials"]::before { transform: translateX(200px); }
+.nav[data-active="packages"]::before { transform: translateX(120px); }
+.nav[data-active="about"]::before { transform: translateX(160px); }
+.nav[data-active="techs"]::before { transform: translateX(200px); }
+.nav[data-active="socials"]::before { transform: translateX(240px); }
 
 
 /* Vertical */

@@ -12,6 +12,10 @@
 }
 
 /* Project*/
+.project-lazy-shell.desktop {
+  min-height: 80vh;
+}
+
 .image-carousel{
     display: flex;
     flex-direction: row;
@@ -20,7 +24,7 @@
     height: auto;
     padding: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     box-shadow: var(--shadow);
     background-color: var(--bg-dark);
 
@@ -39,7 +43,7 @@
     padding-top: 15px;
     font-size: 14px;
     font-weight: 400;
-    color: var(--text-sec);
+    color: var(--text-color-3);
     display: flex;
     flex-direction: row;
     height: auto;
@@ -51,12 +55,12 @@
   height: 65vh;
   width: 85vw;
   padding: 0 40px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
 }
 
 
 .detailed-project.mobile .card-description{
-    background-color: var(--bg-light);
+    background-color: var(--bg-dark);
     background-color: hsl(240, 11%, 16%);
     padding: 10px 15px;
     padding-bottom: 15px;
@@ -74,7 +78,7 @@
 
     font-size: 14px;
     font-weight: 400;
-    color: var(--text-sec);
+    color: var(--text-color-3);
 }
 
 .project-diagram{
@@ -89,7 +93,7 @@
   position: absolute;
   bottom: -15px;
   padding: 4px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   background-color: #373639;
   backdrop-filter: blur(2px);
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 export function ThemeSwitch({ className = "" }) {
   const id = useId();

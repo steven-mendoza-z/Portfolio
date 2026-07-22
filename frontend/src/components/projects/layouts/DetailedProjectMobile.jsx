@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import Text from "../../atomics/Text";
 import ProjectLinks from "../components/ProjectLinks";
 
 function DetailedProjectMobile({ mainImage, title, subtitle, description, links, priority = false }) {
@@ -20,10 +21,10 @@ function DetailedProjectMobile({ mainImage, title, subtitle, description, links,
         <div className="card-description gap20">
           <div className="card-text column-left gap5">
             <div className="column-left">
-              <h3 className="h4 text-main">{title}</h3>
-              <p className="h5 text-mai keyword2">{subtitle}</p>
+              <Text as="h3" size="md" color="highlight-1">{title}</Text>
+              <Text size="sm" color="color-2" semibold>{subtitle}</Text>
             </div>
-            <p className="t-body6 text-sec">{description}</p>
+            <Text size="xs" color="highlight-2">{description}</Text>
           </div>
 
           <ProjectLinks links={links} />

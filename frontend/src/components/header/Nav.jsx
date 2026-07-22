@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Reveal from "../anims/Reveal";
+import Icon from "../atomics/Icon";
 
-const SECTIONS = ["hero", "experience", "systems", "about", "techs"];
+const SECTIONS = ["hero", "experience", "systems", "packages", "about", "techs"];
 
 export function Nav() {
   const [active, setActive] = useState("hero");
@@ -98,7 +99,7 @@ export function Nav() {
           handleClick("hero");
         }}
       >
-        <img src="icons/home.svg" alt="hero" aria-hidden="true" />
+        <Icon src="icons/home.svg" alt="" size="lg" decorative />
       </a>
 
       <a
@@ -111,7 +112,7 @@ export function Nav() {
           handleClick("experience");
         }}
       >
-        <img src="icons/experience.svg" alt="experience" aria-hidden="true" />
+        <Icon src="icons/experience.svg" alt="" size="lg" decorative />
       </a>
 
       <a
@@ -124,7 +125,20 @@ export function Nav() {
           handleClick("systems");
         }}
       >
-        <img src="icons/architecture.svg" alt="projects" aria-hidden="true" />
+        <Icon src="icons/architecture.svg" alt="" size="lg" decorative />
+      </a>
+
+      <a
+        href="#packages"
+        aria-label="Packages"
+        className={`row gap10 tooltip ${active === "packages" ? "selected" : ""}`}
+        data-tooltip="Packages"
+        onClick={(e) => {
+          e.preventDefault();
+          handleClick("packages");
+        }}
+      >
+        <Icon src="icons/package.svg" alt="" size="lg" decorative />
       </a>
 
       <a
@@ -137,7 +151,7 @@ export function Nav() {
           handleClick("about");
         }}
       >
-        <img src="icons/aboutme.svg" alt="about" aria-hidden="true" />
+        <Icon src="icons/aboutme.svg" alt="" size="lg" decorative />
       </a>
 
       <a
@@ -150,7 +164,7 @@ export function Nav() {
           handleClick("techs");
         }}
       >
-        <img src="icons/techs.svg" alt="techs" aria-hidden="true" />
+        <Icon src="icons/techs.svg" alt="" size="lg" decorative />
       </a>
     </Reveal>
   );

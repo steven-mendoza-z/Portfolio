@@ -6,7 +6,7 @@ export const self = {
     "Backend Engineer",
     "APIs · Authentication · Infrastructure-Aware Development"
   ],
-  image: "profile_pic.webp",
+  image: "profile-picture.webp",
   description: "I design and implement API-driven **backend systems**, working across feature delivery, business logic, and deployment workflows for production and independent systems.",
   aboutMe: [
     "In production environments, I contribute to .NET backend APIs within multi-company SaaS architectures, **translating product requirements into structured backend solutions** within established architectures.",

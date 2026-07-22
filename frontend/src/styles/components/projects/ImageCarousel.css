@@ -13,20 +13,20 @@
   pointer-events: none;
   background: rgba(0, 115, 172, 0.08);
   background-blend-mode: multiply;
-border-radius: 10px;
+border-radius: var(--radius-sm);
 }
 
 
 .card-img{
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     display: flex;
     object-fit: contain;
 }
 
 .detailed-project.mobile .card-img{
-    border-radius: 0px;
+    border-radius: var(--radius-none);
 }
 
 .project-overview .card-img {

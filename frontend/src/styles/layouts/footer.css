@@ -7,7 +7,7 @@ footer {
    
 footer .email {
     padding: 0;
-    border-radius: 50px;
+    border-radius: var(--radius-pill);
     gap: 15px;
     padding: 0 10px;
     border: none;
@@ -17,12 +17,13 @@ footer .email {
 }
 footer .email:hover {
     background-color: #0000;
-    color: var(--text-main);
 }
 footer .email:hover::before {
     background-color: #0000;
 }
-
+footer .email:hover .text {
+      color: var(--text-color-2);
+}
 
 /* Tooltip global */
 .desktop .email.tooltip::after{
@@ -39,10 +40,10 @@ footer .email:hover::before {
 
   font-size: 12px;
   font-weight: 600;
-  color: var(--text-sec);
+  color: var(--text-color-3);
   background-color: var(--bg);
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 
   z-index: 9999;
 }

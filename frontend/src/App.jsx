@@ -3,11 +3,8 @@ import { Suspense, lazy } from "react";
 
 const Home = lazy(() => import("./pages/Home"));
 const MainLayout = lazy(() => import("./layouts/MainLayout"));
-// const MobileLayout = lazy(() => import("./layouts/MobileLayout"));
 
 function App() {
-  // const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  // const Layout = isMobile ? MobileLayout : MainLayout;
   const Layout = MainLayout;
 
   return (

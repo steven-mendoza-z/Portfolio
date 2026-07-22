@@ -1,7 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
-import Footer from "./Footer";
-import Reveal from "../components/anims/Reveal";
 import Socials from "./Footer";
 import Background from "./Background";
 

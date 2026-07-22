@@ -4,7 +4,7 @@
   /* background-color: hsl(240, 11%, 15%); */
   /* background-color: hsl(240, 11%, 16%); */
   /* background-color: var(--bg-dark); */
-  border-radius: 20px 10px 10px 20px;
+  border-radius: var(--radius-project-overview);
   padding-left: 40px;
 }
 .project-description {
@@ -26,10 +26,10 @@
 .tag{
   font-size: 12px;
   font-weight: 400;
-  color: var(--text-highlight);
+  color: var(--text-color-1);
   background-color: var(--border);
   border: 2px solid var(--border);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   padding: 5px;
 }
 
@@ -47,11 +47,11 @@ button.project-link {
   background-color: var(--highlight2);
 
   padding: 8px 10px; 
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   border: none;
   line-height: 1;
 
-  color: var(--text-highlight);
+  color: var(--text-color-1);
   text-align: center;
   z-index: 1;            
 }
@@ -63,8 +63,6 @@ button.project-link {
 .project-link img {
   position: absolute;
   right: 10px;
-  width: 15px;
-  height: 15px;
   filter: invert(70%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 

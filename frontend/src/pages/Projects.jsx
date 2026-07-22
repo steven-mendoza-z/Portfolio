@@ -1,5 +1,6 @@
 import SummarizedProject from "../components/projects/layouts/SummarizedProject";
 import DetailedProject from "../components/projects/layouts/DetailedProject";
+import Text from "../components/atomics/Text";
 import { projects } from "../data/projects";
 
 export function Projects() {
@@ -8,7 +9,7 @@ export function Projects() {
 
   return (
     <section id="systems" className="section projects">
-      <h2 className="h4 text-hl2 text-shadow">Systems I’ve Built</h2>
+      <Text as="h2" size="md" color="color-2" className="text-shadow">Systems I’ve Built</Text>
 
       {detailedProjects.length > 0 && (
         <div className="full-projects">

@@ -1,21 +1,24 @@
-import { useState } from "react";
 import { self } from "../data/self";
 import { socials } from "../data/socials";
 import renderHighlightedText from "../helpers/RenderHighlightedText";
 import RevealStagger from "../components/anims/RevealStagger";
 import Reveal from "../components/anims/Reveal";
+import Icon from "../components/atomics/Icon";
+import Text from "../components/atomics/Text";
 
 export function Hero() {
-  const [loaded, setLoaded] = useState(false);
-
   return (
     <section id="hero" className="flex section hero">
       <Reveal initDelay={40}>
         <img
           src={self.image}
           alt="Steven Mendoza portrait"
-          className={`profile-img ${loaded ? "visible" : ""}`}
-          onLoad={() => setLoaded(true)}
+          className="profile-img"
+          width="280"
+          height="280"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
       </Reveal>
       
@@ -28,20 +31,26 @@ export function Hero() {
         threshold={0}
       >
         <div className="hero-header column">
-          <h1 className="h1 text-hl2">{self.name}</h1>
+          <Text as="h1" size="xxl" color="color-2" adaptative>{self.name}</Text>
 
-          <h2 className="hero-subtitle">
-            {self.title.map((line) => (
-              <span key={line} className="h2">
+          <Text as="h2" className="hero-subtitle">
+            {self.title.map((line, index) => (
+              <Text
+                as="span"
+                key={line}
+                size={index === 0 ? "xl" : "md"}
+                color={index === 0 ? "highlight-1" : undefined}
+                adaptative
+              >
                 {line}
-              </span>
+              </Text>
             ))}
-          </h2>
+          </Text>
         </div>
 
-        <p className="hero-desc t-body4 text-hl3">
-          {renderHighlightedText(self.description, "keywords")}
-        </p>
+        <Text className="hero-desc" size="sm" color="highlight-2" adaptative>
+          {renderHighlightedText(self.description)}
+        </Text>
 
         <div className="full-w gap30 row center hero-socials">
           {socials.map((social) => (
@@ -51,7 +60,7 @@ export function Hero() {
               key={social.name}
               rel="noopener noreferrer"
             >
-              <img src={`socials/${social.img}`} alt={social.name} className="icon-inverter" />
+              <Icon src={`socials/${social.img}`} alt={social.name} size="xl" className="icon-inverter" />
             </a>
           ))}
         </div>

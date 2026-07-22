@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import Icon from "../atomics/Icon";
+import Text from "../atomics/Text";
 
 export function ResumeButtonDesktop() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -56,14 +58,14 @@ export function ResumeButtonDesktop() {
         onClick={(e) => e.stopPropagation()} // evita cerrar antes de navegar
       >
         <div className="row gap10">
-          <p className="t-body5">Resume</p>
-          <img src="icons/redirect.svg" alt="Open resume" />
+          <Text size="xxs">Resume</Text>
+          <Icon src="icons/redirect.svg" alt="Open resume" size="sm" />
         </div>
       </a>
 
       {/* Arrow */}
       <div className="arrow" onClick={handleArrowClick}>
-        <img src="icons/down-arrow.svg" alt="View options" />
+        <Icon src="icons/down-arrow.svg" alt="View options" size="sm" />
       </div>
 
       {/* Menu */}
@@ -76,14 +78,14 @@ export function ResumeButtonDesktop() {
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
-                <p>View Resume</p>
-                <img src="icons/redirect.svg" alt="" />
+                <Text>View Resume</Text>
+                <Icon src="icons/redirect.svg" alt="" size="md" decorative />
               </a>
             </li>
             <li>
               <a href="Steven_Mendoza_Backend_Engineer.pdf" download onClick={(e) => e.stopPropagation()}>
-                <p>Download Resume</p>
-                <img src="icons/download.svg" alt="" className="download" />
+                <Text>Download Resume</Text>
+                <Icon src="icons/download.svg" alt="" size="md" decorative className="download" />
               </a>
             </li>
           </ul>

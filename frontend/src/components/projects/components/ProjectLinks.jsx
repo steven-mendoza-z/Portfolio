@@ -1,3 +1,5 @@
+import Icon from "../../atomics/Icon";
+import Text from "../../atomics/Text";
 import RowWrapper from "../../ui/RowWrapper";
 
 export function ProjectLinks({links}) {
@@ -19,8 +21,8 @@ export function ProjectLinks({links}) {
               target="_blank"
               rel="noopener noreferrer"
           >
-              <p className="t-body5">{type}</p>
-              <img src="icons/redirect.svg" alt="Open resume in new tab" />
+              <Text size="xxs" semibold>{type}</Text>
+              <Icon src="icons/redirect.svg" alt="Open project link" size="md" />
           </button>
       ))}
     </RowWrapper>

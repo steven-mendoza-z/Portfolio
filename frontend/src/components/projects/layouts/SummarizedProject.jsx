@@ -1,5 +1,7 @@
 import ImageCarousel from "../components/AutoplayImageCarousel";
 import ProjectLinks from "../components/ProjectLinks";
+import Tech from "../../ui/Tech";
+import Text from "../../atomics/Text";
 
 export function SummarizedProject ({
   mainImg,
@@ -18,17 +20,15 @@ export function SummarizedProject ({
 
           <div className="card-description gap5">
               {/* Title & Description */}
-              <p className="h5 text-hl2">{name}</p>
-              <p className="t-body6 text-hl3">{description}</p>
+              <Text size="xs" color="color-2">{name}</Text>
+              <Text size="xxs" color="highlight-2">{description}</Text>
 
               {/* Stack */}
               <div className="full-w row-left gap30 align">
                 {hasStack && (
                   <div className="project-stack row">
                     {stack.map((tech) => (
-                      <div key={tech.name}>
-                        <img src={tech.img} alt={tech.name} />
-                      </div>
+                      <Tech key={tech.name} tech={tech} size="lg" />
                     ))}
                   </div>
                 )}

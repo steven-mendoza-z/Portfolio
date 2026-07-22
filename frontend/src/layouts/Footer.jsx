@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { socials } from "../data/socials";
 import { self } from "../data/self";
+import Icon from "../components/atomics/Icon";
+import Text from "../components/atomics/Text";
 
 export function Footer() {
   const [tip, setTip] = useState("Copy");
@@ -55,9 +57,10 @@ export function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
+              <Icon
                 src={`socials/${social.img}`}
                 alt={social.name}
+                size="xl"
                 className="icon-inverter"
               />
             </a>
@@ -71,12 +74,12 @@ export function Footer() {
           data-tooltip={tip}
           onClick={copyEmail}
         >
-          <p className="h5 text-sec">{self.email}</p>
+          <Text size="xs" color="color-3" semibold>{self.email}</Text>
         </button>
       </div>
 
       <div className="column center">
-        <p className="h7">{self.footer}</p>
+        <Text size="xxs">{self.footer}</Text>
       </div>
     </footer>
   );

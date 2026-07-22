@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Text from "../../atomics/Text";
 
 export function ProjectNav({ elements = [], onSelect, init = null }) {
   const [active, setActive] = useState(init);
@@ -18,7 +19,7 @@ export function ProjectNav({ elements = [], onSelect, init = null }) {
           data-tooltip={element}
           onClick={() => handleClick(element)}
         >
-          <p className="t-body5">{element}</p>
+          <Text size="xxs" semibold>{element}</Text>
         </button>
       ))}
     </nav>
