@@ -1,15 +1,15 @@
 export const packages = [
     {
-        name: "hermes-deployer",
-        url: "https://pypi.org/project/hermes-deployer/",
-        cmd: "pip install hermes-deployer",
+        name: "assistant-service-kit",
+        url: "https://pypi.org/project/assistant-service-kit/",
+        cmd: "pip install assistant-service-kit",
 
         iconUrl: "icons/pypi.webp",
-        repo: "https://github.com/steven-mendoza-z/hermes-deployer",
+        repo: "https://github.com/steven-mendoza-z/assistant-service-kit",
 
         description: "Hermes is a robust and extensible environment manager designed to orchestrate complex DevOps workflows across multiple servers, applications, and services.",
         tags: [
-            "Orchestration", "DevOps", "Automation", "Remote Access"
+            "AI", "LangChain", "RAG", "Tenancy"
         ]   
     },
     {
