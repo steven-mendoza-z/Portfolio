@@ -17,7 +17,7 @@ cv:
 
     experience:
       - company: "Techcore / BlackShadow"
-        position: "Software Associate Senior Engineer SASE"
+        position: "Software Associate Senior Engineer SASE | AI Engineer"
         start_date: "2026-10"
         end_date: "present"
         location: "Delaware, USA (Remote)"
@@ -38,7 +38,6 @@ cv:
           - Implemented organization-scoped signup and login workflows, including OTP-based verification, company provisioning, and token-based invitation handling.
           - Introduced multi-tenant account state enforcement (verified account + company membership) before granting access, ensuring consistent authorization boundaries.
           - Performed database schema evolution through entity refactoring and controlled migrations within a logically isolated multi-tenant model, enabling stable onboarding of first external client companies (early adoption stage, fewer than 10 companies).
-    
     projects:
       - name: "[Fazzty](https://play.google.com/store/apps/details?id=com.fazzty.users)"
         start_date: "2026-06"
