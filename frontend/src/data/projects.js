@@ -74,7 +74,7 @@ export const projects = [
       }
     ],
     links: {
-      "View Platform": "https://hermes.purpleblue.site/",
+      // "View Platform": "https://hermes.purpleblue.site/",
       "Package (PyPI)": "https://pypi.org/project/hermes-deployer/",
       "Platform Repo": "https://github.com/steven-mendoza-z/hermes-deploy-service.git",
       "Package Repo": "https://github.com/steven-mendoza-z/hermes-deployer.git",
@@ -139,7 +139,7 @@ export const projects = [
       "quackternion/mockups/quackternion-mockup-2.webp",
     ],
     links: {
-      "View App": "https://quackternion.purpleblue.site/",
+      // "View App": "https://quackternion.purpleblue.site/",
       "Repo": "https://github.com/steven-mendoza-z/quackternion.git",
     },
     stack: [
@@ -190,7 +190,7 @@ export const projects = [
       "eulerian/mockups/eulerian-mockup-4.webp",
     ],
     links: {
-      "View App": "https://eulerian-hades.purpleblue.site/",
+      // "View App": "https://eulerian-hades.purpleblue.site/",
       "Repo": "https://github.com/steven-mendoza-z/eulerian-hades.git",
     },
     stack: [
