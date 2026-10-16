@@ -83,7 +83,7 @@ export function ResumeButtonDesktop() {
               </a>
             </li>
             <li>
-              <a href="Steven_Mendoza_Backend_Engineer.pdf" download onClick={(e) => e.stopPropagation()}>
+              <a href="Steven_Mendoza_Software_Engineer.pdf" download onClick={(e) => e.stopPropagation()}>
                 <Text>Download Resume</Text>
                 <Icon src="icons/download.svg" alt="" size="md" decorative className="download" />
               </a>
