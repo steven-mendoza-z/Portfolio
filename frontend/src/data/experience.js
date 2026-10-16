@@ -3,7 +3,7 @@
 export const experience = [
 {
     company: "Techcore / BlackShadow",
-    role: "Software Associate Senior Engineer SASE",
+    role: "Software Associate Senior Engineer SASE | AI Engineer",
     date: "Oct 2026 – Present",
     location: "Remote",
     logos: [
