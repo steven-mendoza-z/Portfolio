@@ -7,7 +7,7 @@ export function Experience() {
     <section id="experience" className="section experience">
       <Text as="h2" size="md" color="color-2" className="text-shadow">Experience</Text>
 
-      <div className="column gap40">
+      <div className="experience-list column">
         {experience.map((item) => (
           <ExperienceItem
             key={item.company}

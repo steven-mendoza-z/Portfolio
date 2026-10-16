@@ -11,58 +11,72 @@ cv:
       username: "steven-mendoza-z"
 
   sections:
+
     summary:
-      - "Backend engineer building API-driven systems within production SaaS environments. Hands-on experience stabilizing authentication flows, implementing multi-tenant data isolation, and evolving database schemas across .NET and Python-based architectures. Final-year Cybernetic Electronics Engineering student with a systems-oriented approach to software design."
+      - "Software Engineer specializing in the end-to-end delivery of distributed applications. Proven track record of driving the technical vision for proprietary multi-tenant SaaS systems. Experienced in translating complex business requirements into resilient software architectures, robust APIs, and cohesive user experiences, bringing a strong background in business logic analysis, full-stack development, and cloud infrastructure."
 
     experience:
+      - company: "Techcore / BlackShadow"
+        position: "Software Associate Senior Engineer SASE"
+        start_date: "2026-10"
+        end_date: "present"
+        location: "Delaware, USA (Remote)"
+        summary: "Driving the end-to-end architecture and implementation of a proprietary auditing system from the ground up, operating with high technical autonomy in alignment with the Product Owner and Software Architect."
+        highlights:
+          - Engineered an ultra-lightweight (7.7MB) native Windows endpoint agent that captures precise network telemetry and process activity while ensuring minimal system overhead.
+          - Designed a highly resilient, event-driven backend architecture to guarantee real-time processing and strict validation of high-throughput auditing events across isolated system domains.
+          - Delivered a performant, type-safe web dashboard that translates complex auditing telemetry into actionable, real-time insights for stakeholders.
+          - Took full ownership of the development lifecycle, accelerating the path to internal beta testing by establishing zero-friction CI/CD pipelines and reproducible Infrastructure as Code (IaC).
       - company: "NetForemost"
         position: "Software Engineer (Full-Stack)"
         start_date: "2025-10"
-        end_date: "present"
+        end_date: "2026-10"
         location: "Panama (Remote)"
         summary:
         highlights:
           - Led stabilization and redesign of authentication and onboarding flows in a multi-tenant .NET SaaS platform affected by broken signup and invitation logic.
           - Implemented organization-scoped signup and login workflows, including OTP-based verification, company provisioning, and token-based invitation handling.
           - Introduced multi-tenant account state enforcement (verified account + company membership) before granting access, ensuring consistent authorization boundaries.
-          - Performed database schema evolution through entity refactoring and controlled migrations within a logically isolated multi-tenant model, enabling stable onboarding of first external client companies (early adoption stage, fewer than 10 companies)
+          - Performed database schema evolution through entity refactoring and controlled migrations within a logically isolated multi-tenant model, enabling stable onboarding of first external client companies (early adoption stage, fewer than 10 companies).
     
     projects:
+      - name: "[Fazzty](https://play.google.com/store/apps/details?id=com.fazzty.users)"
+        start_date: "2026-06"
+        end_date: "present"
+        summary: "Climate tech and micromobility startup making last-mile delivery more sustainable while helping riders earn income and work toward owning an electric bike through a Work-to-Own model."
+        highlights:
+          - Founded Fazzty to connect riders and local businesses through affordable, lower-emission last-mile delivery.
+          - Lead the technical architecture and development of an integrated ecosystem of mobile and web applications serving customers, partner businesses, riders, and administrative teams.
+          - Implemented real-time geospatial visibility across the order lifecycle, enabling teams to track customers, partner businesses, and riders involved in each delivery.
+          - Preparing to launch a pilot in Nicaragua, with plans to scale the model across Latin America.
       - name: "[Hermes Services](https://hermes.purpleblue.site/)"
         start_date: "2025-01"
-        end_date: "present"
+        end_date: "2025-12"
         summary: "DevOps-as-Code platform and PyPI package for automating multi-server deployments and environment management."
         highlights:
-          - Designed and implemented a DevOps-as-Code platform enabling automated multi-server deployments and reproducible environment provisioning
-          - Architected backend services with Django REST, Redis, and PostgreSQL to support CI/CD-driven infrastructure workflows
-          - Packaged core deployment logic as a reusable Python library published on PyPI
+          - Designed and implemented a DevOps-as-Code platform enabling automated multi-server deployments and reproducible environment provisioning.
+          - Architected backend services with Django REST, Redis, and PostgreSQL to support CI/CD-driven infrastructure workflows.
+          - Packaged core deployment logic as a reusable Python library published on PyPI.
       - name: "[Quackternion](https://quackternion.purpleblue.site/)"
         start_date: "2025-04"
-        end_date: "present"
+        end_date: "2025-10"
         summary: Interactive 3D simulator applying spatial transformations using quaternions. Currently in a stable maintenance phase.
         highlights:
-          - Designed backend services to process and persist quaternion-based spatial transformations
-          - Implemented automated PDF/LaTeX report generation pipeline from computed transformation data
-          - Built and deployed a backend-driven fullstack application with Django REST, PostgreSQL, and containerized infrastructure
-      - name: "[Eulerian Hades](https://eulerian-hades.purpleblue.site/)"
-        start_date: "2024-01"
-        end_date: "2024-12"
-        summary: Learning and problem-solving platform for engineering students. Initial version delivered; further development planned.
-        highlights:
-          - Designed a modular architecture for managing educational content, problem sets, and user progress tracking
-          - Implemented API endpoints and data models using Django REST and PostgreSQL, with Redis-based caching strategies
+          - Designed backend services to process and persist quaternion-based spatial transformations.
+          - Implemented automated PDF/LaTeX report generation pipeline from computed transformation data.
+          - Built and deployed a backend-driven fullstack application with Django REST, PostgreSQL, and containerized infrastructure.
          
     skills:
+      - label: System Architecture
+        details: Multi-Tenant SaaS Design, Domain-Driven Design (DDD), Event-Driven Systems, RESTful API Design, Data Isolation, Authentication (JWT/OAuth2)
       - label: Backend Technologies
-        details: .NET (ASP.NET Core), Python, Django REST Framework
-      - label: API & Architecture
-        details: API design, authentication & account lifecycle modeling (JWT, OAuth2), domain modeling
+        details: Python, Go, .NET (ASP.NET Core), Django REST Framework
       - label: Databases & Caching
         details: PostgreSQL, Redis, MongoDB
       - label: DevOps & Infrastructure
         details: Docker, Nginx, GitHub Actions (CI/CD), Google Cloud Platform (GCP)
       - label: Frontend
-        details: React, JavaScript, Flutter
+        details: React, JavaScript/Typescript, Flutter
       - label: Languages
         details: English (C1 – Professional), Spanish (Native) 
 
@@ -71,11 +85,11 @@ cv:
         area: Cybernetic Electronics Engineering
         degree: Bachelor’s Degree
         start_date: 2022-01
-        end_date: 2026-12
+        end_date: "present"
         location: Nicaragua
         highlights:
-          - Strong foundation in systems thinking, applied mathematics, and structured problem-solving
-          - Academic focus on computer networks and software system modeling
+          - Strong foundation in systems thinking, applied mathematics, and structured problem-solving.
+          - Academic focus on computer networks and software system modeling.
 
   sort_entries: none
 
@@ -230,6 +244,6 @@ locale:
     - November
     - December
 rendercv_settings:
-  date: '2026-03-02'
+  date: '2026-10-16'
   bold_keywords: []
   sort_entries: none

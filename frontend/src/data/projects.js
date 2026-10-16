@@ -3,6 +3,38 @@ import * as techs from "../data/techs";
 
 export const projects = [
   {
+    type: "full",
+    title: "Fazzty - Work it. Pay it. Own it!",
+    subtitle: " (Fazzty Founder/Tech Lead)",
+    mainImage: "fazzty/fazzty-logo.webp",
+
+    // Overview Section
+    description: [
+      "Fazzty is a climate tech and micromobility startup making delivery work a path to income and e-bike ownership. ",
+      "Our Work-to-Own model connects fazzters (riders) and local businesses through affordable, low-emission last-mile delivery. ",
+      "Launching in Central America, Fazzty aims to scale across Latin America."
+    ],
+
+    links: {
+      "Customer App": "https://play.google.com/store/apps/details?id=com.fazzty.users",
+      "Businesses App": "https://admin.fazzty.co/",
+    },
+
+    tags: [
+      "Climate Tech",
+      "Micromobility",
+      "Work-to-Own",
+    ],
+
+    galleryImages: [
+      "fazzty/banner-1.webp",
+      "fazzty/fazzty-dubai.jpeg",
+      "fazzty/banner-2.png",
+    ],
+
+  },
+
+  {
     // Meta + Content
     type: "full",
     title: "Hermes Services",

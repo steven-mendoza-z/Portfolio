@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Tech from "../ui/Tech";
 import Tags from "../ui/Tags";
 import Text from "../atomics/Text";
 import renderHighlightedText from "../../helpers/RenderHighlightedText";
@@ -10,12 +9,13 @@ export function ExperienceItem({
   date,
   location,
   logo,
+  logos = logo ? [{ src: logo, alt: company }] : [],
+  logoBackground,
   description,
   bullets = [],
   techs = [],
   tags = [],
 }) {
-  const hasStack = techs.length > 0;
   const hasTags = tags.length > 0;
 
   return (
@@ -28,9 +28,25 @@ export function ExperienceItem({
     >
       <div className="experience-card card row gap30">
         {/* Logo */}
-        {logo && (
-          <div className="logo-container">
-            <img src={logo} alt={company} className="experience-logo"/>
+        {logos.length > 0 && (
+          <div
+            className="logo-container"
+            style={{
+              ...(logoBackground && { backgroundColor: logoBackground }),
+            }}
+          >
+            {logos.map((item, index) => (
+              <img
+                key={item.src}
+                src={item.src}
+                alt={item.alt ?? company}
+                className="experience-logo"
+                style={{
+                  ...(item.size && { width: item.size, height: item.size }),
+                  ...(item.radius !== undefined && { borderRadius: item.radius }),
+                }}
+              />
+            ))}
           </div>
         )}
 
@@ -64,20 +80,11 @@ export function ExperienceItem({
             </div>
 
 
-            {hasStack && hasTags && 
-            <div className="experience-extras gap20">
-              {hasStack && (
-                <div className="project-stack gap20 row">
-                  {techs.map((tech) => (
-                    <Tech key={tech.name ?? tech.id ?? JSON.stringify(tech)} tech={tech} size="xl" />
-                  ))}
-                </div>
-              )}
-
-              {hasTags && (
+            {hasTags && (
+              <div className="experience-extras gap20">
                 <Tags tags={tags}/>
-              )}
-            </div>}
+              </div>
+            )}
             
 
 
